@@ -1,35 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 250" width="100%" height="100%">
-  <!-- LOGOTYPE: mandis -->
-  <g stroke="#FFFFFF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none">
-    <!-- 'm' -->
-    <path d="M 25 80 V 200"/>
-    <path d="M 25 80 C 25 52 70 52 70 80 V 200"/>
-    <path d="M 70 80 C 70 52 115 52 115 80 V 200"/>
-
-    <!-- 'a' -->
-    <path d="M 175 80 V 200"/>
-    <path d="M 175 80 C 135 80 135 140 175 140 C 135 140 135 200 175 200"/>
-
-    <!-- 'n' -->
-    <path d="M 205 80 V 200"/>
-    <path d="M 205 80 C 205 52 250 52 250 80 V 200"/>
-
-    <!-- 'd' -->
-    <path d="M 315 20 V 200"/>
-    <path d="M 315 80 C 275 80 275 200 315 200"/>
-
-    <!-- 'i' -->
-    <path d="M 342 100 V 200"/>
-    <path d="M 342 20 V 65"/>
-
-    <!-- 's' -->
-    <path d="M 420 80 H 380 C 365 80 365 135 400 135 C 425 135 425 200 375 200 H 365"/>
-  </g>
-
-  <!-- SUBTITLE: d i g i t a l -->
-  <g fill="#FFFFFF">
-    <text x="25" y="238" font-family="'Inter', 'Montserrat', system-ui, -apple-system, sans-serif" font-weight="400" font-size="24" letter-spacing="18">
-      digital
-    </text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 80" width="100%" height="100%">
+  {/* Main Text: mandis */}
+  <text x="0" y="48" fill="#FFFFFF" font-family="'Inter', system-ui, -apple-system, sans-serif" font-weight="900" font-size="52" letter-spacing="-1">
+    mandis
+  </text>
+  {/* Sub-text: digital */}
+  <text x="2" y="70" fill="#22d3ee" font-family="'Inter', system-ui, -apple-system, sans-serif" font-weight="500" font-size="16" letter-spacing="9">
+    digital
+  </text>
 </svg>
