@@ -4,12 +4,9 @@ interface MandisLogoProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
   height?: number | string;
   className?: string;
-  variant?: 'full' | 'mark' | 'badge' | 'logotype' | 'card';
+  variant?: 'full' | 'mark' | 'badge';
   glow?: boolean;
   color?: string;
-  showTagline?: boolean;
-  withBg?: boolean;
-  bgColor?: string;
 }
 
 export const MandisLogo: React.FC<MandisLogoProps> = ({
@@ -17,18 +14,15 @@ export const MandisLogo: React.FC<MandisLogoProps> = ({
   height,
   className = '',
   variant = 'full',
-  glow = true,
-  color = '#FFFFFF',
-  showTagline = true,
-  withBg = false,
-  bgColor = '#0038FF',
+  glow = false,
+  color = 'currentColor',
   ...props
 }) => {
-  const glowStyle = glow ? 'drop-shadow-[0_0_18px_rgba(0,56,255,0.75)] hover:drop-shadow-[0_0_24px_rgba(0,56,255,0.95)]' : '';
+  const glowStyle = glow ? 'drop-shadow-[0_0_12px_rgba(6,182,212,0.5)]' : '';
 
-  // 1. Icon Mark Only (Monogram emblem for small badges / favicon)
+  // 1. Icon Mark / Badge Variant (for small headers, chips)
   if (variant === 'mark' || variant === 'badge') {
-    const markSize = typeof size === 'number' ? size : 40;
+    const markSize = typeof size === 'number' ? size : 32;
     return (
       <svg
         width={markSize}
@@ -36,78 +30,78 @@ export const MandisLogo: React.FC<MandisLogoProps> = ({
         viewBox="0 0 100 100"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className={`${className} ${glowStyle} shrink-0 rounded-xl`}
+        className={`${className} ${glowStyle} shrink-0`}
         {...props}
       >
-        {withBg && <rect width="100" height="100" rx="20" fill={bgColor} />}
-        <g fill="none" stroke={color} strokeLinecap="round" strokeLinejoin="round">
-          {/* Monogram emblem 'm' and 'd' */}
-          <path d="M 18 75 V 36 C 18 22 36 22 36 36 V 75 M 36 36 C 36 22 54 22 54 36 V 75" strokeWidth="10" />
-          <path d="M 68 75 V 18" strokeWidth="10" />
-          <path d="M 68 36 H 76 C 88 36 88 75 76 75 H 68" strokeWidth="10" />
+        <g stroke={color} strokeWidth="8" strokeLinecap="square" strokeLinejoin="miter" fill="none">
+          {/* Emblem: stylized 'm' and 'd' */}
+          <path d="M 15 80 V 35 C 15 22 36 22 36 35 V 80 M 36 35 C 36 22 57 22 57 35 V 80" />
+          <path d="M 85 80 V 15" />
+          <path d="M 85 35 C 65 35 65 80 85 80" />
         </g>
       </svg>
     );
   }
 
-  // 2. Full Standard Brand Logotype (Navbar, Footer, Headers)
-  // ViewBox: 0 0 480 250 -> aspect ratio is ~1.92:1
+  // 2. Full Standard Mandis Digital Logotype (matching provided logo image)
   const logoHeight = height || (typeof size === 'number' ? size : 48);
-  const logoWidth = typeof logoHeight === 'number' ? logoHeight * 1.92 : 'auto';
+  // ViewBox: 0 0 460 260 -> Aspect Ratio ~ 1.77 : 1
+  const logoWidth = typeof logoHeight === 'number' ? logoHeight * 1.77 : 'auto';
 
   return (
     <svg
       width={logoWidth}
       height={logoHeight}
-      viewBox="0 0 480 250"
+      viewBox="0 0 460 260"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={`${className} ${glowStyle} shrink-0 transition-all duration-300`}
       {...props}
     >
-      {/* Background Rect (Optional, defaults to transparent/no bg) */}
-      {withBg && <rect width="480" height="250" rx="28" fill={bgColor} />}
-
-      {/* Main Logotype geometry: mandis (Distinct, highly readable geometric lettering) */}
-      <g fill="none" stroke={color} strokeLinecap="square" strokeLinejoin="round">
+      {/* 
+        LOGOTYPE: mandis 
+        Exact tall, rounded-condensed geometric font matching the brand image
+      */}
+      <g fill="none" stroke={color} strokeWidth="15" strokeLinecap="square" strokeLinejoin="miter">
         {/* 'm' */}
-        <path d="M 45 92 V 168" strokeWidth="22" />
-        <path d="M 45 92 C 45 58 84 58 84 92 V 168" strokeWidth="22" />
-        <path d="M 84 92 C 84 58 123 58 123 92 V 168" strokeWidth="22" />
+        <path d="M 25 70 V 195" />
+        <path d="M 25 70 C 25 45 70 45 70 70 V 195" />
+        <path d="M 70 70 C 70 45 115 45 115 70 V 195" />
 
-        {/* 'a' - Right stem, top arch, lower bowl on left */}
-        <path d="M 184 60 V 168" strokeWidth="22" />
-        <path d="M 152 92 C 152 60 184 60 184 60" strokeWidth="22" />
-        <path d="M 184 114 H 168 C 152 114 152 168 168 168 H 184" strokeWidth="22" />
+        {/* 'a' */}
+        <path d="M 180 70 V 195" />
+        <path d="M 180 70 C 135 70 135 130 180 130" />
+        <path d="M 180 130 C 135 130 135 195 180 195" />
 
         {/* 'n' */}
-        <path d="M 212 92 V 168" strokeWidth="22" />
-        <path d="M 212 92 C 212 58 250 58 250 92 V 168" strokeWidth="22" />
+        <path d="M 210 70 V 195" />
+        <path d="M 210 70 C 210 45 255 45 255 70 V 195" />
 
-        {/* 'd' - Ascender stem at x=310 & full round left bowl matching x-height */}
-        <path d="M 310 30 V 168" strokeWidth="22" />
-        <path d="M 310 60 H 294 C 278 60 278 168 294 168 H 310" strokeWidth="22" />
+        {/* 'd' */}
+        <path d="M 320 20 V 195" />
+        <path d="M 320 70 C 275 70 275 195 320 195" />
 
-        {/* 'i' - x-height stem at x=338 & distinct dot above x-height */}
-        <path d="M 338 68 V 168" strokeWidth="22" />
-        <path d="M 338 20 V 42" strokeWidth="22" strokeLinecap="square" />
+        {/* 'i' */}
+        <path d="M 350 95 V 195" />
+        <path d="M 350 20 V 65" />
 
         {/* 's' */}
-        <path d="M 418 60 H 384 C 366 60 366 114 384 114 H 400 C 418 114 418 168 400 168 H 366" strokeWidth="22" />
+        <path d="M 435 70 H 390 C 375 70 375 130 405 130 C 435 130 435 195 390 195 H 375" />
       </g>
 
-      {/* Subtitle: digital */}
-      <g fill={color} fontFamily="'Inter', system-ui, -apple-system, sans-serif" fontWeight="700" fontSize="36" letterSpacing="12">
-        <text x="45" y="215">digital</text>
+      {/* SUBTITLE: d i g i t a l */}
+      <g fill={color}>
+        <text
+          x="25"
+          y="242"
+          fontFamily="'Inter', 'Montserrat', system-ui, -apple-system, sans-serif"
+          fontWeight="400"
+          fontSize="28"
+          letterSpacing="18"
+        >
+          digital
+        </text>
       </g>
-
-      {/* Tagline: marketing solutions */}
-      {showTagline && (
-        <g fill={color} opacity="0.95" fontFamily="'Inter', system-ui, -apple-system, sans-serif" fontWeight="500" fontSize="15" letterSpacing="1">
-          <text x="270" y="235">marketing solutions</text>
-        </g>
-      )}
     </svg>
   );
 };
-

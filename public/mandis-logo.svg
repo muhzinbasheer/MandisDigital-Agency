@@ -1,40 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 250" width="100%" height="100%">
-  <g fill="none" stroke="#FFFFFF" stroke-linecap="square" stroke-linejoin="round">
-    <!-- Main Logotype: mandis (Clean, unmistakable geometric lettering) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 260" width="100%" height="100%">
+  <!-- LOGOTYPE: mandis -->
+  <g fill="none" stroke="#FFFFFF" stroke-width="15" stroke-linecap="square" stroke-linejoin="miter">
     <!-- 'm' -->
-    <path d="M 45 92 V 168" stroke-width="22"/>
-    <path d="M 45 92 C 45 58 84 58 84 92 V 168" stroke-width="22"/>
-    <path d="M 84 92 C 84 58 123 58 123 92 V 168" stroke-width="22"/>
-    
+    <path d="M 25 70 V 195"/>
+    <path d="M 25 70 C 25 45 70 45 70 70 V 195"/>
+    <path d="M 70 70 C 70 45 115 45 115 70 V 195"/>
+
     <!-- 'a' -->
-    <path d="M 184 60 V 168" stroke-width="22"/>
-    <path d="M 152 92 C 152 60 184 60 184 60" stroke-width="22"/>
-    <path d="M 184 114 H 168 C 152 114 152 168 168 168 H 184" stroke-width="22"/>
+    <path d="M 180 70 V 195"/>
+    <path d="M 180 70 C 135 70 135 130 180 130"/>
+    <path d="M 180 130 C 135 130 135 195 180 195"/>
 
     <!-- 'n' -->
-    <path d="M 212 92 V 168" stroke-width="22"/>
-    <path d="M 212 92 C 212 58 250 58 250 92 V 168" stroke-width="22"/>
+    <path d="M 210 70 V 195"/>
+    <path d="M 210 70 C 210 45 255 45 255 70 V 195"/>
 
-    <!-- 'd' - Ascender stem at x=310 & full round left bowl matching x-height -->
-    <path d="M 310 30 V 168" stroke-width="22"/>
-    <path d="M 310 60 H 294 C 278 60 278 168 294 168 H 310" stroke-width="22"/>
+    <!-- 'd' -->
+    <path d="M 320 20 V 195"/>
+    <path d="M 320 70 C 275 70 275 195 320 195"/>
 
-    <!-- 'i' - x-height stem at x=338 & distinct dot above x-height -->
-    <path d="M 338 68 V 168" stroke-width="22"/>
-    <path d="M 338 20 V 42" stroke-width="22" stroke-linecap="square"/>
+    <!-- 'i' -->
+    <path d="M 350 95 V 195"/>
+    <path d="M 350 20 V 65"/>
 
     <!-- 's' -->
-    <path d="M 418 60 H 384 C 366 60 366 114 384 114 H 400 C 418 114 418 168 400 168 H 366" stroke-width="22"/>
+    <path d="M 435 70 H 390 C 375 70 375 130 405 130 C 435 130 435 195 390 195 H 375"/>
   </g>
 
-  <!-- Subtitle: digital -->
-  <g fill="#FFFFFF" font-family="'Inter', system-ui, -apple-system, sans-serif" font-weight="700" font-size="36" letter-spacing="12">
-    <text x="45" y="215">digital</text>
-  </g>
-
-  <!-- Tagline: marketing solutions -->
-  <g fill="#FFFFFF" opacity="0.95" font-family="'Inter', system-ui, -apple-system, sans-serif" font-weight="500" font-size="15" letter-spacing="1">
-    <text x="270" y="235">marketing solutions</text>
+  <!-- SUBTITLE: d i g i t a l -->
+  <g fill="#FFFFFF">
+    <text x="25" y="242" font-family="'Inter', 'Montserrat', system-ui, -apple-system, sans-serif" font-weight="400" font-size="28" letter-spacing="18">
+      digital
+    </text>
   </g>
 </svg>
-
