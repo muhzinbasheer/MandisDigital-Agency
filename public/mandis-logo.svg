@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 250" width="100%" height="100%">
+  <g fill="none" stroke="#FFFFFF" stroke-linecap="square" stroke-linejoin="round">
+    <!-- Main Logotype: mandis (Clean, unmistakable geometric lettering) -->
+    <!-- 'm' -->
+    <path d="M 45 92 V 168" stroke-width="22"/>
+    <path d="M 45 92 C 45 58 84 58 84 92 V 168" stroke-width="22"/>
+    <path d="M 84 92 C 84 58 123 58 123 92 V 168" stroke-width="22"/>
+    
+    <!-- 'a' -->
+    <path d="M 184 60 V 168" stroke-width="22"/>
+    <path d="M 152 92 C 152 60 184 60 184 60" stroke-width="22"/>
+    <path d="M 184 114 H 168 C 152 114 152 168 168 168 H 184" stroke-width="22"/>
+
+    <!-- 'n' -->
+    <path d="M 212 92 V 168" stroke-width="22"/>
+    <path d="M 212 92 C 212 58 250 58 250 92 V 168" stroke-width="22"/>
+
+    <!-- 'd' - Ascender stem at x=310 & full round left bowl matching x-height -->
+    <path d="M 310 30 V 168" stroke-width="22"/>
+    <path d="M 310 60 H 294 C 278 60 278 168 294 168 H 310" stroke-width="22"/>
+
+    <!-- 'i' - x-height stem at x=338 & distinct dot above x-height -->
+    <path d="M 338 68 V 168" stroke-width="22"/>
+    <path d="M 338 20 V 42" stroke-width="22" stroke-linecap="square"/>
+
+    <!-- 's' -->
+    <path d="M 418 60 H 384 C 366 60 366 114 384 114 H 400 C 418 114 418 168 400 168 H 366" stroke-width="22"/>
+  </g>
+
+  <!-- Subtitle: digital -->
+  <g fill="#FFFFFF" font-family="'Inter', system-ui, -apple-system, sans-serif" font-weight="700" font-size="36" letter-spacing="12">
+    <text x="45" y="215">digital</text>
+  </g>
+
+  <!-- Tagline: marketing solutions -->
+  <g fill="#FFFFFF" opacity="0.95" font-family="'Inter', system-ui, -apple-system, sans-serif" font-weight="500" font-size="15" letter-spacing="1">
+    <text x="270" y="235">marketing solutions</text>
+  </g>
+</svg>
+

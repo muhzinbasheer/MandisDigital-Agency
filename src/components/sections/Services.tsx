@@ -10,22 +10,23 @@ export const Services: React.FC = () => {
   const [selectedService, setSelectedService] = useState<Service>(servicesData[0]);
 
   return (
-    <section id="services" className="py-24 bg-[#08090d] relative overflow-hidden">
+    <section id="services" className="py-24 bg-[#030712] relative overflow-hidden">
       {/* Background ambient lighting */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-indigo-600/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-cyan-500/10 blur-[140px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-violet-600/10 blur-[140px] rounded-full pointer-events-none" />
 
       <Container size="lg">
         <SectionHeading
-          badge="Core Capabilities"
-          title="Revenue-Driven Digital Services"
-          subtitle="We don't just sell services—we engineer targeted acquisition frameworks designed to solve specific growth bottlenecks and maximize ROI."
+          badge="Our Services"
+          title="Everything Your Business Needs to Grow Online"
+          subtitle="We provide innovative, result-driven digital marketing solutions that help businesses build a stronger online presence, connect with the right audience, and achieve sustainable growth. As the Best Marketing Agency in Palakkad, we create customized marketing strategies that deliver measurable results and long-term success. Partner with the Best Marketing Agency in Palakkad to grow your brand, generate quality leads, and stay ahead of the competition."
         />
 
         {/* Services Grid & Detail View */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* Left Column: Service Selector List */}
+          {/* Left Column: Service Selector List (8 Services) */}
           <div className="lg:col-span-5 flex flex-col gap-3">
-            {servicesData.map((service) => {
+            {servicesData.map((service, index) => {
               const Icon = service.icon;
               const isSelected = selectedService.id === service.id;
 
@@ -34,33 +35,35 @@ export const Services: React.FC = () => {
                   key={service.id}
                   type="button"
                   onClick={() => setSelectedService(service)}
-                  className={`w-full text-left p-5 rounded-2xl border transition-all duration-300 flex items-center justify-between group focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 ${
+                  className={`w-full text-left p-4 sm:p-5 rounded-2xl border transition-all duration-300 flex items-center justify-between group focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 ${
                     isSelected
-                      ? 'bg-[#121522] border-indigo-500/60 shadow-lg shadow-indigo-500/10'
-                      : 'bg-[#0f1118]/60 border-[#212638] hover:border-slate-700 hover:bg-[#121520]'
+                      ? 'bg-[#0b0f19] border-cyan-500/60 shadow-lg shadow-cyan-500/15'
+                      : 'bg-[#090d16]/70 border-[#1e2438] hover:border-cyan-500/30 hover:bg-[#0c101c]'
                   }`}
                 >
                   <div className="flex items-center gap-4">
                     <div
-                      className={`w-11 h-11 rounded-xl flex items-center justify-center transition-colors ${
+                      className={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl flex items-center justify-center transition-colors shrink-0 ${
                         isSelected
-                          ? 'bg-indigo-600 text-white shadow-md'
-                          : 'bg-[#191d2b] text-slate-400 group-hover:text-white'
+                          ? 'bg-gradient-to-r from-cyan-500 to-indigo-600 text-slate-950 font-bold shadow-md shadow-cyan-500/20'
+                          : 'bg-[#121626] text-slate-400 group-hover:text-cyan-300'
                       }`}
                     >
                       <Icon className="w-5 h-5" />
                     </div>
                     <div>
-                      <h3 className={`font-semibold text-base transition-colors ${isSelected ? 'text-white' : 'text-slate-300'}`}>
+                      <div className="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-0.5">
+                        Service {index + 1}
+                      </div>
+                      <h3 className={`font-semibold text-sm sm:text-base transition-colors ${isSelected ? 'text-white' : 'text-slate-300'}`}>
                         {service.title}
                       </h3>
-                      <p className="text-xs text-slate-400 mt-0.5">{service.category}</p>
                     </div>
                   </div>
 
                   <ArrowRight
-                    className={`w-4 h-4 transition-transform duration-200 ${
-                      isSelected ? 'text-indigo-400 translate-x-1' : 'text-slate-600 group-hover:text-slate-400'
+                    className={`w-4 h-4 shrink-0 transition-transform duration-200 ${
+                      isSelected ? 'text-cyan-400 translate-x-1' : 'text-slate-600 group-hover:text-slate-400'
                     }`}
                   />
                 </button>
@@ -68,7 +71,7 @@ export const Services: React.FC = () => {
             })}
           </div>
 
-          {/* Right Column: Deep Problem -> Solution -> Outcome Breakdown */}
+          {/* Right Column: Service Deep Breakdown */}
           <div className="lg:col-span-7">
             <AnimatePresence mode="wait">
               <motion.div
@@ -77,12 +80,12 @@ export const Services: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.35 }}
-                className="p-8 sm:p-10 rounded-3xl bg-glass-card border border-white/10 shadow-2xl relative overflow-hidden"
+                className="p-6 sm:p-10 rounded-3xl bg-glass-ai border border-cyan-500/20 shadow-2xl relative overflow-hidden"
               >
                 {/* Header info */}
-                <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-[#212638]">
+                <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-[#1e2438]">
                   <div>
-                    <span className="text-xs font-bold uppercase tracking-wider text-indigo-400">
+                    <span className="text-xs font-bold uppercase tracking-wider text-cyan-400">
                       {selectedService.category}
                     </span>
                     <h3 className="font-display text-2xl sm:text-3xl font-extrabold text-white mt-1">
@@ -91,7 +94,7 @@ export const Services: React.FC = () => {
                   </div>
 
                   {selectedService.badge && (
-                    <span className="px-3 py-1 rounded-full text-xs font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">
+                    <span className="px-3 py-1 rounded-full text-xs font-bold bg-cyan-500/10 text-cyan-300 border border-cyan-500/30">
                       {selectedService.badge}
                     </span>
                   )}
@@ -109,18 +112,18 @@ export const Services: React.FC = () => {
                     <AlertCircle className="w-5 h-5 text-rose-400 shrink-0 mt-0.5" />
                     <div>
                       <span className="text-xs font-bold uppercase tracking-wider text-rose-400 block mb-0.5">
-                        The Bottleneck
+                        Common Challenge
                       </span>
                       <p className="text-sm text-slate-300">{selectedService.problem}</p>
                     </div>
                   </div>
 
                   {/* Solution */}
-                  <div className="p-4 rounded-xl bg-indigo-500/5 border border-indigo-500/20 flex items-start gap-3">
-                    <Lightbulb className="w-5 h-5 text-indigo-400 shrink-0 mt-0.5" />
+                  <div className="p-4 rounded-xl bg-cyan-500/5 border border-cyan-500/20 flex items-start gap-3">
+                    <Lightbulb className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" />
                     <div>
-                      <span className="text-xs font-bold uppercase tracking-wider text-indigo-400 block mb-0.5">
-                        Our Solution
+                      <span className="text-xs font-bold uppercase tracking-wider text-cyan-400 block mb-0.5">
+                        Mandis Digital Solution
                       </span>
                       <p className="text-sm text-slate-300">{selectedService.solution}</p>
                     </div>
@@ -131,7 +134,7 @@ export const Services: React.FC = () => {
                     <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                     <div>
                       <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 block mb-0.5">
-                        Business Outcome ({selectedService.metrics})
+                        Business Growth Outcome
                       </span>
                       <p className="text-sm font-semibold text-white">{selectedService.outcome}</p>
                     </div>
@@ -139,12 +142,12 @@ export const Services: React.FC = () => {
                 </div>
 
                 {/* Feature Bullets */}
-                <div className="mt-8 pt-6 border-t border-[#212638]">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">Included Execution Deliverables:</h4>
+                <div className="mt-8 pt-6 border-t border-[#1e2438]">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">Core Deliverables & Features:</h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {selectedService.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-sm text-slate-300">
-                        <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 shrink-0" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shrink-0" />
                         <span>{feature}</span>
                       </div>
                     ))}
@@ -152,10 +155,10 @@ export const Services: React.FC = () => {
                 </div>
 
                 {/* CTA inside detail card */}
-                <div className="mt-8 flex items-center justify-between pt-6 border-t border-[#212638]">
-                  <div className="text-xs text-slate-400 font-medium">Ready to deploy this capability?</div>
-                  <Button href="#contact" variant="primary" size="sm" icon={<ArrowRight className="w-4 h-4" />}>
-                    Discuss Strategy
+                <div className="mt-8 flex items-center justify-between pt-6 border-t border-[#1e2438]">
+                  <div className="text-xs text-slate-400 font-medium">Ready to grow your business online?</div>
+                  <Button href="#contact" variant="glow" size="sm" icon={<ArrowRight className="w-4 h-4" />}>
+                    Get Started
                   </Button>
                 </div>
               </motion.div>

@@ -6,34 +6,31 @@ export interface Testimonial {
   company: string;
   metrics: string;
   avatarBg: string;
+  logoText?: string;
+  stars: number;
 }
 
 export const testimonialsData: Testimonial[] = [
   {
-    id: "t1",
-    quote: "Mandis Digital completely transformed our digital customer acquisition. Their strategy isn't just about traffic—it's laser-focused on bottom-line profit and pipeline growth.",
-    author: "Elena Rostova",
-    role: "VP of Marketing",
-    company: "Apex Financial",
-    metrics: "3.2x Revenue Growth",
-    avatarBg: "from-indigo-500 to-purple-600"
+    id: "englishoo",
+    quote: "Mandis Digital helped us build a more structured online presence, from our website and SEO to social media content and advertising. Their team understands our requirements and consistently supports our digital marketing activities.",
+    author: "Englishoo Team",
+    role: "Education / English Learning",
+    company: "Englishoo",
+    metrics: "Structured Digital Growth & SEO",
+    avatarBg: "from-teal-500 to-emerald-600",
+    logoText: "Englishoo",
+    stars: 5
   },
   {
-    id: "t2",
-    quote: "Working with Mandis Digital felt like having an elite, internal growth team. They delivered our rebrand and performance campaigns 2 weeks ahead of deadline with unbelievable quality.",
-    author: "Marcus Chen",
-    role: "Co-Founder & CEO",
-    company: "Lumina Health",
-    metrics: "4.8x ROAS Sustained",
-    avatarBg: "from-cyan-500 to-blue-600"
-  },
-  {
-    id: "t3",
-    quote: "The organic search strategy Mandis Digital designed unlocked enterprise contracts we'd been trying to land for years. Their technical precision is unmatched.",
-    author: "Sarah Jenkins",
-    role: "Chief Growth Officer",
-    company: "Nexus Cloud",
-    metrics: "+410% Organic Leads",
-    avatarBg: "from-emerald-500 to-teal-600"
+    id: "18-smell",
+    quote: "From branding and product presentation to promotional content, Mandis Digital helped us create a stronger identity for 18 Smell. The creative approach made our products look more professional across digital platforms.",
+    author: "18 Smell Team",
+    role: "Perfume Brand",
+    company: "18 Smell Perfumery",
+    metrics: "Stronger Identity & Visual Brand",
+    avatarBg: "from-amber-500 to-indigo-600",
+    logoText: "18 Smell",
+    stars: 5
   }
 ];

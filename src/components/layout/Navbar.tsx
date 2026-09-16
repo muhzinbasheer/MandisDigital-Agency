@@ -6,11 +6,10 @@ import { Container } from '../common/Container';
 import { Button } from '../common/Button';
 
 const navItems = [
+  { label: 'About Us', href: '#why-us' },
   { label: 'Services', href: '#services' },
-  { label: 'Why Us', href: '#why-us' },
-  { label: 'Case Studies', href: '#work' },
-  { label: 'Process', href: '#process' },
-  { label: 'Testimonials', href: '#testimonials' },
+  { label: 'Our Process', href: '#process' },
+  { label: 'Our Work', href: '#work' },
   { label: 'FAQ', href: '#faq' },
 ];
 
@@ -43,39 +42,29 @@ export const Navbar: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        isScrolled
-          ? 'py-3 bg-[#08090d]/85 backdrop-blur-xl border-b border-[#212638]/70 shadow-xl'
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled
+          ? 'py-3 bg-[#030712]/90 backdrop-blur-2xl border-b border-cyan-500/20 shadow-xl shadow-cyan-950/20'
           : 'py-5 bg-transparent'
-      }`}
+        }`}
     >
       <Container size="lg">
         <nav className="flex items-center justify-between" aria-label="Main Navigation">
           {/* Logo */}
           <a
             href="#"
-            className="flex items-center gap-2.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 rounded-lg p-1"
+            className="flex items-center group focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded-lg p-1"
+            aria-label="Mandis Digital Home"
           >
-            <div className="w-10 h-10 rounded-xl bg-[#121520] border border-indigo-500/30 flex items-center justify-center text-white shadow-lg shadow-indigo-500/20 group-hover:scale-105 group-hover:border-indigo-500/60 transition-all duration-300">
-              <MandisLogo size={22} glow />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-display font-extrabold text-xl tracking-tight text-white leading-none">
-                MANDIS<span className="text-indigo-400">.</span>
-              </span>
-              <span className="text-[10px] font-semibold tracking-widest text-slate-400 uppercase leading-none mt-1">
-                Digital Agency
-              </span>
-            </div>
+            <MandisLogo size={36} glow className="group-hover:scale-[1.02] transition-transform duration-300" />
           </a>
 
           {/* Desktop Nav Links */}
-          <ul className="hidden lg:flex items-center gap-1 bg-[#121520]/80 p-1.5 rounded-full border border-[#212638]">
+          <ul className="hidden lg:flex items-center gap-1 bg-[#0b0f19]/90 p-1.5 rounded-full border border-cyan-500/20 shadow-[0_0_20px_rgba(6,182,212,0.1)]">
             {navItems.map((item) => (
               <li key={item.label}>
                 <a
                   href={item.href}
-                  className="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200 block"
+                  className="px-4 py-2 text-sm font-medium text-slate-300 hover:text-cyan-300 hover:bg-cyan-500/10 rounded-full transition-all duration-200 block"
                 >
                   {item.label}
                 </a>
@@ -94,7 +83,7 @@ export const Navbar: React.FC = () => {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2.5 rounded-xl bg-[#121520] border border-[#212638] text-slate-200 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
+            className="lg:hidden p-2.5 rounded-xl bg-[#0b0f19] border border-cyan-500/30 text-slate-200 hover:text-cyan-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
             aria-expanded={mobileMenuOpen}
             aria-label="Toggle Navigation Menu"
           >
@@ -110,31 +99,27 @@ export const Navbar: React.FC = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="lg:hidden bg-[#0a0c13] border-b border-[#212638] overflow-hidden"
+            transition={{ duration: 0.3 }}
+            className="lg:hidden bg-[#070b14]/95 backdrop-blur-2xl border-b border-cyan-500/30 overflow-hidden"
           >
             <Container size="lg" className="py-6 flex flex-col gap-4">
-              <ul className="flex flex-col gap-2">
-                {navItems.map((item) => (
-                  <li key={item.label}>
-                    <a
-                      href={item.href}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="px-4 py-3 rounded-lg text-slate-200 hover:bg-indigo-600/10 hover:text-indigo-400 text-base font-semibold block transition-colors"
-                    >
-                      {item.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="pt-4 border-t border-[#212638] flex flex-col gap-3">
+              {navItems.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-lg font-medium text-slate-200 hover:text-cyan-300 py-2 transition-colors border-b border-slate-800/60"
+                >
+                  {item.label}
+                </a>
+              ))}
+              <div className="pt-2">
                 <Button
                   href="#contact"
                   variant="glow"
                   size="md"
+                  className="w-full"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="w-full justify-center"
                 >
                   Start a Project
                 </Button>

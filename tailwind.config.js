@@ -9,24 +9,28 @@ export default {
     extend: {
       colors: {
         background: {
-          DEFAULT: '#08090d',
-          card: '#0f1118',
-          elevated: '#171a26',
-          border: '#212638'
+          DEFAULT: '#030712',
+          card: '#0b0f19',
+          elevated: '#121626',
+          border: '#1e2438'
         },
         brand: {
-          50: '#eef2ff',
-          100: '#e0e7ff',
-          200: '#c7d2fe',
-          300: '#a5b4fc',
-          400: '#818cf8',
-          500: '#6366f1',
-          600: '#4f46e5',
-          700: '#4338ca',
-          800: '#3730a3',
-          900: '#312e81',
+          50: '#ecfeff',
+          100: '#cffafe',
+          200: '#a5f3fc',
+          300: '#67e8f9',
+          400: '#22d3ee',
+          500: '#06b6d4',
+          600: '#0284c7',
+          700: '#0369a1',
+          800: '#075985',
+          900: '#0c4a6e',
           accent: '#00f2fe',
-          neon: '#7928ca',
+          cyan: '#38bdf8',
+          violet: '#8b5cf6',
+          indigo: '#6366f1',
+          fuchsia: '#d946ef',
+          neon: '#a855f7',
           emerald: '#10b981',
           amber: '#f59e0b'
         }
@@ -40,6 +44,7 @@ export default {
         'marquee-reverse': 'marquee-reverse 35s linear infinite',
         'float': 'float 6s ease-in-out infinite',
         'pulse-glow': 'pulse-glow 4s ease-in-out infinite',
+        'ai-shimmer': 'ai-shimmer 3s linear infinite',
       },
       keyframes: {
         marquee: {
@@ -57,9 +62,14 @@ export default {
         'pulse-glow': {
           '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
           '50%': { opacity: '0.8', transform: 'scale(1.05)' },
+        },
+        'ai-shimmer': {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
         }
       }
     },
   },
   plugins: [],
 }
+

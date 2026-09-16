@@ -1,5 +1,4 @@
 import React from 'react';
-import { ScrollProgress } from './components/effects/ScrollProgress';
 import { CursorGlow } from './components/effects/CursorGlow';
 import { Marquee } from './components/effects/Marquee';
 import { Navbar } from './components/layout/Navbar';
@@ -15,23 +14,20 @@ import { FAQ } from './components/sections/FAQ';
 import { CTA } from './components/sections/CTA';
 
 const marqueeKeywords = [
-  "Search Engine Optimization",
-  "Performance Marketing",
-  "Conversion Rate Optimization",
-  "Headless Web Platforms",
-  "Paid Media Scale",
-  "Direct-To-Consumer",
-  "B2B SaaS Growth",
-  "Brand Identity Systems",
-  "Attribution Analytics"
+  "Search Engine Optimization (SEO)",
+  "Social Media Marketing (SMM)",
+  "Website Design & Development",
+  "Meta Ads (Facebook & Instagram)",
+  "Google Ads",
+  "Branding & Graphic Design",
+  "Video & Content Marketing",
+  "Google Business Profile Optimization",
+  "Best Marketing Agency in Palakkad"
 ];
 
 export const App: React.FC = () => {
   return (
     <div className="relative min-h-screen bg-[#08090d] text-slate-100 font-sans selection:bg-indigo-500 selection:text-white">
-      {/* Top Scroll Indicator */}
-      <ScrollProgress />
-
       {/* Ambient Desktop Glow Cursor */}
       <CursorGlow />
 
@@ -52,9 +48,9 @@ export const App: React.FC = () => {
 
         <Work />
 
-        <Process />
-
         <Testimonials />
+
+        <Process />
 
         <FAQ />
 

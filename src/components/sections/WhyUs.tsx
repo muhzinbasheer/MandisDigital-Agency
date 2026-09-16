@@ -1,49 +1,51 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Target, Cpu, LineChart } from 'lucide-react';
-import { MandisLogo } from '../common/MandisLogo';
+import { Target, Cpu, LineChart, Award } from 'lucide-react';
 import { Container } from '../common/Container';
 import { SectionHeading } from '../common/SectionHeading';
 
 const pillars = [
   {
     icon: Target,
-    title: "1. Revenue First, Vanity Second",
-    description: "We don't celebrate useless metrics like impression counts. Our targets are bound strictly to pipeline revenue, customer acquisition cost, and bottom-line margin.",
+    title: "1. Result-Oriented Digital Strategies",
+    description: "We don't focus on vanity metrics. Our strategies are built around your actual business goals—generating quality leads, increasing sales, and improving online visibility.",
     color: "from-indigo-500 to-purple-600",
-    badge: "Strategy"
+    badge: "Results First"
   },
   {
     icon: Cpu,
-    title: "2. Technical & Data Engineering",
-    description: "Marketing is software. We engineer blazing-fast headless web experiences, custom attribution pipelines, and deep search schema architectures.",
+    title: "2. Tailored to Your Business Goals",
+    description: "Whether you are a startup establishing your brand or an established enterprise aiming for higher revenue, every strategy is customized to your audience and budget.",
     color: "from-cyan-500 to-blue-600",
-    badge: "Technology"
+    badge: "Custom Strategy"
   },
   {
-    icon: MandisLogo,
-    title: "3. Uncompromising Visual Polish",
-    description: "Aesthetics dictate consumer trust. We craft high-end visual systems, bespoke video creative, and typography that projects category leadership.",
+    icon: Award,
+    title: "3. Full-Service Digital Capability",
+    description: "From SEO, Google & Meta Ads to web design, branding, and video marketing—we provide end-to-end digital solutions under one roof.",
     color: "from-purple-500 to-pink-600",
-    badge: "Creative"
+    badge: "Full-Service"
   },
   {
     icon: LineChart,
-    title: "4. Rapid Creative Testing",
-    description: "We continuously test positioning variations, ad angles, and user flows to find winning scalable hooks before scaling ad spend.",
+    title: "4. Sustainable Long-Term Growth",
+    description: "We help businesses build strong digital foundations that deliver continuous, compounding returns and outpace industry competitors.",
     color: "from-emerald-500 to-teal-600",
-    badge: "Performance"
+    badge: "Sustainable Scale"
   }
 ];
 
 export const WhyUs: React.FC = () => {
   return (
-    <section id="why-us" className="py-24 bg-[#0a0c13] relative overflow-hidden">
+    <section id="why-us" className="py-24 bg-[#070b14] relative overflow-hidden">
+      {/* Ambient glowing orb */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-cyan-500/10 blur-[150px] rounded-full pointer-events-none" />
+
       <Container size="lg">
         <SectionHeading
-          badge="The Mandis Standard"
-          title="Why Ambitious Brands Choose Mandis Digital"
-          subtitle="Legacy marketing agencies operate on slow retainers and vanity reports. We function as your dedicated growth engineering office."
+          badge="Why Choose Us"
+          title="Why Businesses Partner With Mandis Digital"
+          subtitle="As the Best Marketing Agency in Palakkad, we partner with businesses to deliver customized marketing strategies that create lasting impact."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -56,18 +58,18 @@ export const WhyUs: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="p-8 rounded-3xl bg-[#0f1118]/80 border border-[#212638] hover:border-indigo-500/40 transition-all duration-300 relative group overflow-hidden"
+                className="p-8 rounded-3xl bg-[#0b0f19]/90 border border-[#1e2438] hover:border-cyan-500/40 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] transition-all duration-300 relative group overflow-hidden"
               >
                 <div className="flex items-center justify-between mb-6">
                   <div className={`w-12 h-12 rounded-2xl bg-gradient-to-tr ${pillar.color} flex items-center justify-center text-white shadow-lg`}>
                     <Icon className="w-6 h-6" />
                   </div>
-                  <span className="text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-[#171a26] text-slate-300 border border-[#212638]">
+                  <span className="text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-[#121626] text-cyan-300 border border-cyan-500/30">
                     {pillar.badge}
                   </span>
                 </div>
 
-                <h3 className="font-display text-2xl font-bold text-white mb-3 group-hover:text-indigo-300 transition-colors">
+                <h3 className="font-display text-2xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">
                   {pillar.title}
                 </h3>
                 <p className="text-slate-300 text-base leading-relaxed">
@@ -75,7 +77,7 @@ export const WhyUs: React.FC = () => {
                 </p>
 
                 {/* Subtle bottom highlight bar */}
-                <div className="mt-8 pt-4 border-t border-[#1a1d2b] flex items-center gap-2 text-xs font-semibold text-slate-500 group-hover:text-indigo-400 transition-colors">
+                <div className="mt-8 pt-4 border-t border-[#1e2438] flex items-center gap-2 text-xs font-semibold text-slate-500 group-hover:text-cyan-400 transition-colors">
                   <span>Mandis Guarantee</span>
                   <span>→</span>
                 </div>

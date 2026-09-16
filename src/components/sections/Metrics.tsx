@@ -3,15 +3,15 @@ import { motion } from 'framer-motion';
 import { Container } from '../common/Container';
 
 const stats = [
-  { value: "$40M+", label: "Client Revenue Generated", description: "Directly attributable to performance channels" },
-  { value: "4.8x", label: "Average Return on Ad Spend", description: "Across paid search, social, and display" },
-  { value: "+340%", label: "Average Organic Traffic Lift", description: "Compound search engine growth within 6 months" },
-  { value: "99.4%", label: "Client Retention Rate", description: "Long-term revenue partnership satisfaction" },
+  { value: "8 Core", label: "Digital Solutions", description: "From SEO & Ads to Web Dev, Branding, and Content" },
+  { value: "100%", label: "Customized Strategy", description: "Tailored to your specific goals, audience, and budget" },
+  { value: "Palakkad", label: "Local & Regional Reach", description: "Empowering businesses in Palakkad, Kerala and beyond" },
+  { value: "Result", label: "Driven Execution", description: "Focused on generating quality leads, calls, and growth" },
 ];
 
 export const Metrics: React.FC = () => {
   return (
-    <section className="py-16 bg-[#0a0c13] border-y border-[#1a1d2b] relative overflow-hidden">
+    <section className="py-16 bg-[#070b14] border-y border-[#1e2438] relative overflow-hidden">
       <Container size="lg">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, idx) => (
@@ -21,9 +21,9 @@ export const Metrics: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="p-6 rounded-2xl bg-[#0f1118]/60 border border-[#212638] hover:border-indigo-500/30 transition-all duration-300 group"
+              className="p-6 rounded-2xl bg-[#0b0f19]/80 border border-[#1e2438] hover:border-cyan-500/40 hover:shadow-[0_0_20px_rgba(6,182,212,0.15)] transition-all duration-300 group"
             >
-              <div className="font-display text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-indigo-200 to-indigo-400 group-hover:to-cyan-400 transition-all">
+              <div className="font-display text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-200 to-indigo-300 group-hover:to-cyan-400 transition-all">
                 {stat.value}
               </div>
               <div className="mt-2 text-base font-bold text-white tracking-tight">

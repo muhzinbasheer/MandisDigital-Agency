@@ -24,14 +24,14 @@ export const Button: React.FC<ButtonProps> = ({
   onClick,
   ...props
 }) => {
-  const baseStyles = "inline-flex items-center justify-center font-semibold tracking-wide transition-all duration-300 rounded-full cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400";
+  const baseStyles = "inline-flex items-center justify-center font-semibold tracking-wide transition-all duration-300 rounded-full cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400";
   
   const variants = {
-    primary: "bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-600/30 hover:shadow-indigo-500/50 border border-indigo-400/30",
-    glow: "bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-500 text-white shadow-lg hover:shadow-indigo-500/50 hover:brightness-110 border border-white/20",
-    secondary: "bg-[#171a26] hover:bg-[#212638] text-slate-100 border border-[#212638] hover:border-indigo-500/40 shadow-md",
-    outline: "border border-indigo-500/40 text-indigo-300 hover:bg-indigo-500/10 hover:border-indigo-400 hover:text-white",
-    ghost: "text-slate-300 hover:text-white hover:bg-white/5",
+    primary: "bg-gradient-to-r from-cyan-600 via-indigo-600 to-violet-600 hover:from-cyan-500 hover:to-violet-500 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-400/40 border border-cyan-400/40",
+    glow: "bg-gradient-to-r from-cyan-500 via-indigo-600 to-violet-600 text-white shadow-[0_0_25px_rgba(6,182,212,0.4)] hover:shadow-[0_0_35px_rgba(139,92,246,0.6)] hover:brightness-110 border border-cyan-300/40",
+    secondary: "bg-[#121626] hover:bg-[#1c2236] text-slate-100 border border-[#1e2438] hover:border-cyan-500/50 shadow-md hover:shadow-cyan-500/10",
+    outline: "border border-cyan-500/40 text-cyan-300 hover:bg-cyan-500/10 hover:border-cyan-400 hover:text-white shadow-[0_0_15px_rgba(6,182,212,0.15)]",
+    ghost: "text-slate-300 hover:text-cyan-300 hover:bg-cyan-500/10",
   };
 
   const sizes = {

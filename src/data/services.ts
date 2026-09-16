@@ -1,4 +1,4 @@
-import { Search, TrendingUp, Share2, Code, Zap, Award, LucideIcon } from 'lucide-react';
+import { Search, Share2, Code, Megaphone, TrendingUp, Palette, Video, MapPin, LucideIcon } from 'lucide-react';
 
 export interface Service {
   id: string;
@@ -17,110 +17,146 @@ export interface Service {
 export const servicesData: Service[] = [
   {
     id: "seo",
-    title: "Organic Search Optimization (SEO)",
-    category: "Organic Growth",
-    description: "Dominant organic search visibility engineered to capture high-intent buyers before your competitors do.",
-    problem: "High ad costs and invisible search rankings throttling customer acquisition.",
-    solution: "Technical website optimization, entity-rich content architecture, and strategic digital PR authority building.",
-    outcome: "Long-term compound traffic growth with up to 3.4x lower customer acquisition cost.",
+    title: "Search Engine Optimization – SEO",
+    category: "Search & Organic",
+    description: "Rank higher on search engines, boost organic traffic, and capture high-intent customers actively searching for your services.",
+    problem: "Low website visibility and missing out on valuable local and global search traffic to competitors.",
+    solution: "Comprehensive technical SEO audits, keyword intent strategy, high-quality content architecture, and search optimization.",
+    outcome: "Sustainable organic growth with top search engine rankings and qualified leads.",
     icon: Search,
-    badge: "High ROI",
-    metrics: "+240% Organic Revenue",
+    badge: "Organic Growth",
+    metrics: "High Organic Rankings",
     features: [
-      "Technical & Schema SEO Audit",
+      "Technical & On-Page SEO Audits",
       "Search Intent & Keyword Strategy",
-      "Content Cluster Architecture",
-      "High-Authority Backlink Acquisition"
-    ]
-  },
-  {
-    id: "performance-marketing",
-    title: "Performance & Paid Media (PPC)",
-    category: "Paid Acquisition",
-    description: "Data-backed paid advertising campaigns across Google, Meta, LinkedIn, and TikTok designed for positive ROI from Day 1.",
-    problem: "Wasted ad budget on unoptimized channels with unmeasurable or negative return on ad spend.",
-    solution: "Deep audience segmentation, rapid creative testing frameworks, and multi-touch conversion tracking.",
-    outcome: "Predictable, scalable customer generation with maximum ROAS clarity.",
-    icon: TrendingUp,
-    badge: "Scalable",
-    metrics: "4.8x Average ROAS",
-    features: [
-      "Cross-Channel Campaign Strategy",
-      "Creative Ad Design & Copywriting",
-      "Retargeting & LTV Optimization",
-      "Real-Time Attribution Analytics"
+      "Local & Regional SEO Optimization",
+      "Content Architecture & Link Building"
     ]
   },
   {
     id: "social-media",
-    title: "Social Growth & Community",
-    category: "Brand Awareness",
-    description: "Turn passive social media scrollers into passionate brand advocates through viral-focused creative direction.",
-    problem: "Stagnant engagement and inconsistent brand storytelling across digital customer touchpoints.",
-    solution: "Original short-form video production, brand voice positioning, and active audience engagement.",
-    outcome: "Elevated brand equity and strong organic customer loyalty.",
+    title: "Social Media Marketing – SMM",
+    category: "Social Engagement",
+    description: "Build brand awareness, engage your target audience, and foster active communities across Instagram, Facebook, and LinkedIn.",
+    problem: "Inconsistent social media posts, low engagement, and weak brand presence across key platforms.",
+    solution: "Strategic content planning, captivating post designs, short-form reels, and dedicated audience engagement.",
+    outcome: "Elevated brand equity, loyal customer followings, and consistent lead generation.",
     icon: Share2,
-    badge: "Viral Growth",
-    metrics: "+1.2M Brand Impressions",
+    badge: "Audience Growth",
+    metrics: "+10x Engagement",
     features: [
-      "Short-Form Video Production (Reels/TikTok)",
       "Strategic Content Calendars",
-      "Community Management & Outreach",
-      "Influencer & Creator Partnerships"
+      "Engaging Posts & Short-Form Reels",
+      "Community Management & Audience Outreach",
+      "Multi-Platform Brand Consistency"
     ]
   },
   {
     id: "web-development",
-    title: "High-Converting Web Experiences",
-    category: "Digital Products",
-    description: "Custom, ultra-fast websites and landing pages engineered specifically to turn attention into sales.",
-    problem: "Slow, outdated agency websites that fail to convert traffic into qualified leads.",
-    solution: "Modern headless React/Vite web apps, high-contrast visual systems, and friction-free user flows.",
-    outcome: "Blazing fast page performance with measurable conversion lifts.",
+    title: "Website Design & Development",
+    category: "Digital Platforms",
+    description: "We develop business websites, landing pages, portfolio websites, and e-commerce solutions with SEO and conversions in mind.",
+    problem: "Outdated or slow websites that fail to represent your business properly and turn visitors into clients.",
+    solution: "Modern, high-performance responsive web design, conversion-focused user flows, and SEO-ready development.",
+    outcome: "A stunning digital storefront that builds instant trust and converts visitors into leads and sales.",
     icon: Code,
-    badge: "99/100 Speed",
-    metrics: "2.8x Conversion Rate",
+    badge: "SEO & Conversions",
+    metrics: "High Conversion Rate",
     features: [
-      "Custom React & Next.js Development",
-      "Conversion Rate Optimization (CRO)",
-      "UI/UX Design Systems",
+      "Custom Business & Corporate Websites",
+      "High-Converting Landing Pages",
+      "E-Commerce Online Stores",
       "Mobile-First Responsive Architecture"
     ]
   },
   {
-    id: "cro",
-    title: "Conversion Rate Optimization (CRO)",
-    category: "Revenue Science",
-    description: "Maximize the revenue potential of your existing web traffic through rigorous data science and A/B testing.",
-    problem: "High web traffic volumes with poor conversion rates leaving money on the table.",
-    solution: "User behavior heatmaps, checkout funnel audits, interactive prototyping, and split testing.",
-    outcome: "Immediate revenue growth without spending an extra dollar on advertising.",
-    icon: Zap,
-    badge: "Immediate Impact",
-    metrics: "+42% Checkout Conversion",
+    id: "meta-ads",
+    title: "Meta Ads (Facebook & Instagram)",
+    category: "Paid Social Media",
+    description: "Reach targeted audiences on Facebook and Instagram with eye-catching ad creatives engineered to drive quality leads and sales.",
+    problem: "Wasted advertising budget on ineffective targeting without driving measurable customer leads.",
+    solution: "Hyper-targeted audience segmentation, A/B creative testing, lead generation funnels, and performance optimization.",
+    outcome: "Maximised return on ad spend (ROAS) and scalable customer acquisition.",
+    icon: Megaphone,
+    badge: "Targeted Leads",
+    metrics: "High Campaign ROAS",
     features: [
-      "Funnel Drop-off Analysis",
-      "A/B & Multivariate Testing",
-      "UX Friction Reduction",
-      "Copywriting & Offer Engineering"
+      "Targeted Audience Segmentation",
+      "Lead Generation & Retargeting Ads",
+      "Creative Ad Visuals & Copywriting",
+      "Performance Tracking & Optimization"
+    ]
+  },
+  {
+    id: "google-ads",
+    title: "Google Ads",
+    category: "Pay-Per-Click (PPC)",
+    description: "Be visible right when potential clients search for your services with targeted Google Search and Display ad campaigns.",
+    problem: "Missing out on ready-to-buy customers searching for your products and services online.",
+    solution: "High-intent keyword targeting, compelling search copy, conversion tracking, and continuous campaign optimization.",
+    outcome: "Immediate high-quality traffic, increased phone calls, and direct sales inquiries.",
+    icon: TrendingUp,
+    badge: "Instant Visibility",
+    metrics: "High Intent Leads",
+    features: [
+      "Search & Display Campaign Setup",
+      "High-Intent Keyword Bidding",
+      "Conversion Rate Tracking & Analytics",
+      "Budget & Negative Keyword Management"
     ]
   },
   {
     id: "branding",
-    title: "Brand Systems & Strategy",
-    category: "Identity",
-    description: "Position your company as the undisputed leader in your sector with modern visual positioning.",
-    problem: "Generic visual design and weak messaging that makes your company blend in with competitors.",
-    solution: "Comprehensive visual strategy, brand design guidelines, typography hierarchy, and key narrative craft.",
-    outcome: "Instant category dominance and pricing power.",
-    icon: Award,
-    badge: "Premium Design",
-    metrics: "Category Leader Status",
+    title: "Branding & Graphic Design",
+    category: "Visual Identity",
+    description: "Create a strong identity for your brand with professional logo design, visual brand guidelines, and marketing collateral.",
+    problem: "Generic or inconsistent visual presentation that fails to convey quality and trustworthiness.",
+    solution: "Comprehensive visual identity systems, typography, color palettes, logo suites, and promotional designs.",
+    outcome: "A memorable brand identity that positions your business professionally across all digital touchpoints.",
+    icon: Palette,
+    badge: "Creative Identity",
+    metrics: "Distinctive Branding",
     features: [
-      "Visual Brand Identity Systems",
-      "Value Proposition Frameworks",
-      "Design Systems & Component Kits",
-      "Brand Messaging & Copy Guidelines"
+      "Logo Design & Visual Strategy",
+      "Brand Guidelines & Identity Systems",
+      "Social Media & Ad Graphic Design",
+      "Print & Digital Promotional Materials"
+    ]
+  },
+  {
+    id: "content-marketing",
+    title: "Video & Content Marketing",
+    category: "Content Strategy",
+    description: "Engage your audience and build trust through high-quality video production, promotional reels, and strategic storytelling.",
+    problem: "Difficulty capturing consumer attention and conveying key value propositions effectively.",
+    solution: "High-impact video production, promotional reels, storytelling scripts, and valuable content creation.",
+    outcome: "Deeper customer engagement, higher video retention, and boosted conversion rates.",
+    icon: Video,
+    badge: "High Engagement",
+    metrics: "Strong Storytelling",
+    features: [
+      "Promotional & Commercial Videos",
+      "Short-Form Social Video Content",
+      "Content Strategy & Copywriting",
+      "Brand Storytelling & Video Editing"
+    ]
+  },
+  {
+    id: "gbp-optimization",
+    title: "Google Business Profile Optimization",
+    category: "Local SEO",
+    description: "Optimize your Google Business Profile to rank higher on local Google Maps and search results in Palakkad and beyond.",
+    problem: "Low local visibility causing nearby customers to discover competitor businesses instead.",
+    solution: "Profile setup, category tuning, geotagged image updates, review strategy, and local post updates.",
+    outcome: "Increased phone calls, store visits, and local service inquiries every day.",
+    icon: MapPin,
+    badge: "Local Dominance",
+    metrics: "More Calls & Store Visits",
+    features: [
+      "Local Maps Ranking Optimization",
+      "Accurate Business Information Setup",
+      "Geotagged Photo & Post Updates",
+      "Review & Reputation Optimization"
     ]
   }
 ];

@@ -13,12 +13,15 @@ export const FAQ: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="py-24 bg-[#0a0c13] relative overflow-hidden">
+    <section id="faq" className="py-24 bg-[#030712] relative overflow-hidden">
+      {/* Ambient glowing orb */}
+      <div className="absolute bottom-1/4 left-1/3 w-80 h-80 bg-cyan-500/10 blur-[130px] rounded-full pointer-events-none" />
+
       <Container size="md">
         <SectionHeading
-          badge="Frequently Asked Questions"
-          title="Everything You Need to Know"
-          subtitle="Clear answers about our growth engineering contracts, campaign setups, and performance guarantee model."
+          badge="FAQs"
+          title="Frequently Asked Questions"
+          subtitle="Clear answers about our services, marketing approach, SEO solutions, and how Mandis Digital helps businesses in Palakkad and beyond grow online."
         />
 
         <div className="space-y-4">
@@ -28,23 +31,23 @@ export const FAQ: React.FC = () => {
             return (
               <div
                 key={faq.id}
-                className="rounded-2xl bg-[#0f1118] border border-[#212638] overflow-hidden transition-all duration-200"
+                className="rounded-2xl bg-[#0b0f19] border border-[#1e2438] overflow-hidden transition-all duration-200 hover:border-cyan-500/30"
               >
                 <button
                   type="button"
                   onClick={() => toggleFAQ(faq.id)}
                   aria-expanded={isOpen}
-                  className="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 group"
+                  className="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 group"
                 >
                   <div className="flex items-center gap-3">
-                    <HelpCircle className="w-5 h-5 text-indigo-400 shrink-0" />
-                    <span className="font-semibold text-base sm:text-lg text-white group-hover:text-indigo-300 transition-colors">
+                    <HelpCircle className="w-5 h-5 text-cyan-400 shrink-0" />
+                    <span className="font-semibold text-base sm:text-lg text-white group-hover:text-cyan-300 transition-colors">
                       {faq.question}
                     </span>
                   </div>
                   <ChevronDown
                     className={`w-5 h-5 text-slate-400 shrink-0 transition-transform duration-300 ${
-                      isOpen ? 'rotate-180 text-indigo-400' : ''
+                      isOpen ? 'rotate-180 text-cyan-400' : ''
                     }`}
                   />
                 </button>
@@ -57,7 +60,7 @@ export const FAQ: React.FC = () => {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3, ease: 'easeInOut' }}
                     >
-                      <div className="px-6 pb-6 pt-2 text-sm sm:text-base text-slate-300 leading-relaxed border-t border-[#1a1d2b]/60">
+                      <div className="px-6 pb-6 pt-2 text-sm sm:text-base text-slate-300 leading-relaxed border-t border-[#1e2438]/60">
                         {faq.answer}
                       </div>
                     </motion.div>

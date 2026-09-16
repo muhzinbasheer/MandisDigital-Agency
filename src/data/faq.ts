@@ -8,32 +8,32 @@ export interface FAQItem {
 export const faqData: FAQItem[] = [
   {
     id: "faq-1",
-    question: "What makes Mandis Digital different from traditional marketing agencies?",
-    answer: "Unlike traditional agencies that focus on vanity metrics like clicks and impressions, Mandis Digital operates as a performance-driven revenue partner. We align our strategies directly with revenue growth, CAC reduction, and measurable ROI. Everything we execute—from SEO content to high-speed web apps—is built for conversion.",
-    category: "General"
-  },
-  {
-    id: "faq-2",
-    question: "How quickly can we expect to see results from performance campaigns?",
-    answer: "Paid media campaigns (PPC, Meta, Google Ads) typically generate initial data and qualified conversions within the first 7 to 14 days during our audit and testing phase. Organic SEO and content cluster architectures compound over 60 to 90 days, delivering long-term, scalable low-cost traffic.",
-    category: "Results"
-  },
-  {
-    id: "faq-3",
-    question: "What industries does Mandis Digital specialize in?",
-    answer: "We specialize in B2B SaaS, FinTech, High-Growth E-commerce/D2C, HealthTech, and Professional Services. Our core strategies translate across any sector where customer trust, brand authority, and digital conversion are critical.",
+    question: "1 . What services does Mandis Digital offer as a Best Marketing Agency in Palakkad ?",
+    answer: "Mandis Digital is a full – service digital marketing agency offering a wide range of solutions to help businesses build a strong online presence and achieve sustainable growth . As a Best Marketing Agency in Palakkad , we provide services including Search Engine Optimization (SEO) , Social Media Marketing , Google Ads , Meta Ads , Performance Marketing , Website Design & Development , Content Marketing , Graphic Designing , Video Marketing , Branding , and Google Business Profile optimization . Our services are customized according to each business ‘ s goals , target audience , industry , and budget . Whether you are a startup looking to establish your brand online or an established business aiming to increase leads , sales , and visibility , our team develops result – oriented digital strategies designed around your business objectives .",
     category: "Services"
   },
   {
+    id: "faq-2",
+    question: "2 . Why should I choose Mandis Digital as the Best Marketing Agency in Palakkad ?",
+    answer: "Mandis Digital is dedicated to delivering measurable results tailored to your unique business goals. We combine data-driven strategies, creative excellence, and deep expertise across SEO, paid ads, web development, and social media to maximize your ROI. Our Palakkad-based team provides transparent communication, personalized attention, and proven marketing techniques to help your brand grow sustainably and outperform competitors.",
+    category: "Why Mandis"
+  },
+  {
+    id: "faq-3",
+    question: "3 . How can Mandis Digital help my business get more customers online ?",
+    answer: "We help your business attract, engage, and convert potential customers through multi-channel digital strategies. From improving search engine visibility with targeted SEO to running high-ROI Google & Meta Ads, designing high-converting websites, and crafting engaging social media content, we ensure your brand reaches the right audience at the right time and turns online visits into sales.",
+    category: "Customer Growth"
+  },
+  {
     id: "faq-4",
-    question: "How do you track and report campaign performance?",
-    answer: "Transparency is our foundation. You receive access to custom real-time dashboards mapping ad spend, cost per acquisition (CAC), pipeline volume, conversion rates, and total generated revenue. We schedule bi-weekly strategy calls to review performance and optimize tactics.",
-    category: "Reporting"
+    question: "4 . Does Mandis Digital provide SEO services for businesses in Palakkad ?",
+    answer: "Yes, Mandis Digital provides specialized Search Engine Optimization (SEO) services tailored for businesses in Palakkad and beyond. We optimize your website's technical structure, content, and local Google Business Profile to rank higher on search results, driving organic local traffic, increasing visibility, and generating qualified customer inquiries.",
+    category: "SEO & Local"
   },
   {
     id: "faq-5",
-    question: "How do we get started with a project?",
-    answer: "It starts with a 30-minute strategic discovery call. We analyze your current digital footprint, review past campaign performance, identify your core growth bottlenecks, and provide a tailored digital expansion roadmap.",
-    category: "Onboarding"
+    question: "5 . How long does it take to see results from digital marketing with Mandis Digital ?",
+    answer: "Result timelines depend on the specific channel. Paid advertising campaigns (Google Ads & Meta Ads) can start generating traffic and qualified leads within days. Organic strategies such as Search Engine Optimization (SEO) and Content Marketing typically take 3 to 6 months to establish strong search authority and deliver long-term, compounding growth. We provide ongoing analytics and transparent reporting throughout the journey.",
+    category: "Results Timeline"
   }
 ];
