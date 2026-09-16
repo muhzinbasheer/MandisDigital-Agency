@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
-import { MandisLogo } from '../common/MandisLogo';
 import { Container } from '../common/Container';
 import { Button } from '../common/Button';
 
@@ -32,7 +31,6 @@ export const CTA: React.FC = () => {
             {/* Left Info Column */}
             <div className="lg:col-span-6 flex flex-col items-start">
               <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 mb-6 shadow-[0_0_15px_rgba(6,182,212,0.15)]">
-                <MandisLogo variant="mark" size={18} glow />
                 Get in Touch With Us
               </span>
 

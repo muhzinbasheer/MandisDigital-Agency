@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Search, TrendingUp, Code, Award, CheckCircle2 } from 'lucide-react';
-import { MandisLogo } from '../common/MandisLogo';
 import { Container } from '../common/Container';
 import { Button } from '../common/Button';
 
@@ -24,7 +23,6 @@ export const Hero: React.FC = () => {
               transition={{ duration: 0.5 }}
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-bold uppercase tracking-wider mb-6 shadow-[0_0_20px_rgba(6,182,212,0.15)]"
             >
-              <MandisLogo variant="mark" size={18} glow />
               <span>Best Marketing Agency in Palakkad</span>
             </motion.div>
 
@@ -126,12 +124,9 @@ export const Hero: React.FC = () => {
 
               {/* Bottom Overlay Label */}
               <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-[#070b14]/85 backdrop-blur-md border border-cyan-500/20 flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <MandisLogo variant="badge" size={32} glow />
-                  <div>
-                    <div className="text-xs font-bold text-white">Mandis Digital</div>
-                    <div className="text-[10px] text-cyan-300">Palakkad, Kerala</div>
-                  </div>
+                <div>
+                  <div className="text-xs font-bold text-white">Mandis Digital</div>
+                  <div className="text-[10px] text-cyan-300">Palakkad, Kerala</div>
                 </div>
                 <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
                   PALAKKAD #1

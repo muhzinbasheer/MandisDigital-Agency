@@ -18,15 +18,15 @@ export const MandisLogo: React.FC<MandisLogoProps> = ({
   color = 'currentColor',
   ...props
 }) => {
-  const glowStyle = glow ? 'drop-shadow-[0_0_12px_rgba(6,182,212,0.4)]' : '';
+  const glowStyle = glow ? 'drop-shadow-[0_0_10px_rgba(6,182,212,0.35)]' : '';
 
   if (variant === 'mark' || variant === 'badge') {
     return (
       <div className={`inline-flex flex-col leading-none select-none ${glowStyle} ${className}`} {...props}>
-        <span className="font-display font-black text-white text-base tracking-tight leading-none lowercase">
+        <span className="font-display font-bold text-white text-xs tracking-tight leading-none lowercase">
           mandis
         </span>
-        <span className="font-sans font-normal text-cyan-400 text-[9px] tracking-[0.2em] leading-none lowercase mt-0.5">
+        <span className="font-sans font-normal text-cyan-400 text-[8px] tracking-[0.18em] leading-none lowercase -mt-0.5">
           digital
         </span>
       </div>
@@ -35,13 +35,13 @@ export const MandisLogo: React.FC<MandisLogoProps> = ({
 
   return (
     <div className={`inline-flex flex-col leading-none select-none ${glowStyle} ${className}`} {...props}>
-      {/* Main Text: "mandis" written in a tall, bold, white, sans-serif font */}
-      <span className="font-display font-black text-white text-3xl sm:text-4xl tracking-tight leading-none lowercase">
+      {/* Main Text: "mandis" - decreased size & boldness */}
+      <span className="font-display font-bold text-white text-xl sm:text-2xl tracking-tight leading-none lowercase">
         mandis
       </span>
 
-      {/* Sub-text: "digital" appearing in simpler lowercase lettering */}
-      <span className="font-sans font-medium text-cyan-400 text-xs sm:text-sm tracking-[0.32em] leading-none lowercase mt-1.5 pl-0.5 opacity-90">
+      {/* Sub-text: "digital" - decreased space between mandis and digital */}
+      <span className="font-sans font-normal text-cyan-400 text-[10px] sm:text-xs tracking-[0.22em] leading-none lowercase mt-0.5 opacity-90">
         digital
       </span>
     </div>
