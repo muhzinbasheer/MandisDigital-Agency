@@ -4,7 +4,6 @@ import { Marquee } from './components/effects/Marquee';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import { Hero } from './components/sections/Hero';
-import { Metrics } from './components/sections/Metrics';
 import { Services } from './components/sections/Services';
 import { WhyUs } from './components/sections/WhyUs';
 import { Work } from './components/sections/Work';
@@ -39,8 +38,6 @@ export const App: React.FC = () => {
         <Hero />
 
         <Marquee items={marqueeKeywords} direction="left" />
-
-        <Metrics />
 
         <Services />
 
