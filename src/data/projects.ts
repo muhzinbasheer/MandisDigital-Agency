@@ -52,5 +52,41 @@ export const projectsData: Project[] = [
     imageBg: "from-amber-900/60 to-purple-900/60",
     accentColor: "#f59e0b",
     featured: true
+  },
+  {
+    id: "littledavinci",
+    client: "LittleDavinci",
+    industry: "Educational Products",
+    title: "Branding, Catalogue Design & Educational Product Presentation",
+    challenge: "LittleDavinci needed a more professional, engaging visual presentation for their educational products and brand identity.",
+    strategy: "Mandis Digital designed cohesive branding, product catalogue layouts, and engaging digital marketing content.",
+    execution: "Developed brand guidelines, designed product catalogues, created promotional visual content, and enhanced online product presentation.",
+    results: [
+      { label: "Brand Presence", value: "100%" },
+      { label: "Product Appeal", value: "3.8x" },
+      { label: "Customer Reach", value: "+260%" }
+    ],
+    tags: ["Branding", "Graphic Design", "Social Media"],
+    imageBg: "from-purple-900/60 to-indigo-900/60",
+    accentColor: "#8b5cf6",
+    featured: true
+  },
+  {
+    id: "mandis-ecommerce",
+    client: "Mandis",
+    industry: "E-commerce",
+    title: "E-Commerce Product Presentation & Promotional Creatives",
+    challenge: "Mandis needed improved online product presentation and promotional creatives to communicate product value clearly to customers.",
+    strategy: "Created clear product presentation frameworks, high-converting ad creatives, and optimized the online store experience.",
+    execution: "Designed promotional ad graphics, optimized e-commerce product pages, and launched multi-channel promotional campaigns.",
+    results: [
+      { label: "Conversion Rate", value: "+210%" },
+      { label: "Product Clarity", value: "100%" },
+      { label: "Sales Growth", value: "2.8x" }
+    ],
+    tags: ["Web Development", "Branding", "Meta Ads"],
+    imageBg: "from-blue-900/60 to-cyan-900/60",
+    accentColor: "#06b6d4",
+    featured: true
   }
 ];

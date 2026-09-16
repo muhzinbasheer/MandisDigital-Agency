@@ -32,5 +32,27 @@ export const testimonialsData: Testimonial[] = [
     avatarBg: "from-amber-500 to-indigo-600",
     logoText: "18 Smell",
     stars: 5
+  },
+  {
+    id: "littledavinci",
+    quote: "Mandis Digital helped us present our educational products in a more professional and engaging way. Their support with branding, catalogue design and digital content has been valuable in building our brand presence.",
+    author: "LittleDavinci Team",
+    role: "Educational Products",
+    company: "LittleDavinci",
+    metrics: "Branding, Catalogue & Digital Content",
+    avatarBg: "from-purple-500 to-indigo-600",
+    logoText: "LittleDavinci",
+    stars: 5
+  },
+  {
+    id: "mandis-ecommerce",
+    quote: "The team supported us in improving our online product presentation, promotional creatives and overall digital presence. Their marketing approach helped us communicate our products more clearly to customers.",
+    author: "Mandis E-commerce Team",
+    role: "E-commerce",
+    company: "Mandis",
+    metrics: "Product Presentation & Creatives",
+    avatarBg: "from-cyan-500 to-blue-600",
+    logoText: "Mandis",
+    stars: 5
   }
 ];
