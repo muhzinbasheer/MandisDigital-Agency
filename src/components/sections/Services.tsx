@@ -52,9 +52,6 @@ export const Services: React.FC = () => {
                       <Icon className="w-5 h-5" />
                     </div>
                     <div>
-                      <div className="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-0.5">
-                        Service {index + 1}
-                      </div>
                       <h3 className={`font-semibold text-sm sm:text-base transition-colors ${isSelected ? 'text-white' : 'text-slate-300'}`}>
                         {service.title}
                       </h3>
