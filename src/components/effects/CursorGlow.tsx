@@ -38,7 +38,7 @@ export const CursorGlow: React.FC = () => {
       style={{ opacity: isVisible ? 1 : 0 }}
     >
       <div
-        className="absolute rounded-full w-[450px] h-[450px] bg-gradient-to-tr from-cyan-500/15 via-indigo-500/15 to-violet-600/15 blur-[110px] transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+        className="absolute rounded-full w-[450px] h-[450px] bg-gradient-to-tr from-[#E05236]/10 via-[#E05236]/05 to-[#181C30]/05 blur-[120px] transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"
         style={{
           left: `${position.x}px`,
           top: `${position.y}px`,

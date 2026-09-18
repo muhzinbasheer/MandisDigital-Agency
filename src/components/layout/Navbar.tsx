@@ -43,7 +43,7 @@ export const Navbar: React.FC = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled
-          ? 'py-3 bg-[#030712]/90 backdrop-blur-2xl border-b border-cyan-500/20 shadow-xl shadow-cyan-950/20'
+          ? 'py-3 bg-[#FAF8F5]/90 backdrop-blur-xl border-b border-[#E6E3DB] shadow-sm'
           : 'py-5 bg-transparent'
         }`}
     >
@@ -52,19 +52,19 @@ export const Navbar: React.FC = () => {
           {/* Logo */}
           <a
             href="#"
-            className="flex items-center group focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded-lg p-1"
+            className="flex items-center group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E05236] rounded-lg py-1 px-2 sm:px-3 pl-3 sm:pl-4"
             aria-label="Mandis Digital Home"
           >
-            <MandisLogo size={36} glow className="group-hover:scale-[1.02] transition-transform duration-300" />
+            <MandisLogo height={68} color="#111113" glow className="group-hover:scale-[1.03] transition-transform duration-300" />
           </a>
 
           {/* Desktop Nav Links */}
-          <ul className="hidden lg:flex items-center gap-1 bg-[#0b0f19]/90 p-1.5 rounded-full border border-cyan-500/20 shadow-[0_0_20px_rgba(6,182,212,0.1)]">
+          <ul className="hidden lg:flex items-center gap-1 bg-[#EFECE6]/80 p-1.5 rounded-full border border-[#E2DDD3] shadow-sm backdrop-blur-md">
             {navItems.map((item) => (
               <li key={item.label}>
                 <a
                   href={item.href}
-                  className="px-4 py-2 text-sm font-medium text-slate-300 hover:text-cyan-300 hover:bg-cyan-500/10 rounded-full transition-all duration-200 block"
+                  className="px-4 py-2 text-xs font-bold uppercase tracking-wider text-stone-700 hover:text-[#E05236] hover:bg-white rounded-full transition-all duration-200 block shadow-none hover:shadow-sm"
                 >
                   {item.label}
                 </a>
@@ -74,7 +74,7 @@ export const Navbar: React.FC = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3">
-            <Button href="#contact" variant="glow" size="sm" icon={<ArrowUpRight className="w-4 h-4" />}>
+            <Button href="#contact" variant="primary" size="sm" icon={<ArrowUpRight className="w-4 h-4" />}>
               Start a Project
             </Button>
           </div>
@@ -83,7 +83,7 @@ export const Navbar: React.FC = () => {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2.5 rounded-xl bg-[#0b0f19] border border-cyan-500/30 text-slate-200 hover:text-cyan-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+            className="lg:hidden p-2.5 rounded-xl bg-white border border-[#E6E3DB] text-stone-800 hover:text-[#E05236] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E05236] shadow-sm"
             aria-expanded={mobileMenuOpen}
             aria-label="Toggle Navigation Menu"
           >
@@ -100,7 +100,7 @@ export const Navbar: React.FC = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-[#070b14]/95 backdrop-blur-2xl border-b border-cyan-500/30 overflow-hidden"
+            className="lg:hidden bg-white/95 backdrop-blur-2xl border-b border-[#E6E3DB] shadow-lg overflow-hidden"
           >
             <Container size="lg" className="py-6 flex flex-col gap-4">
               {navItems.map((item) => (
@@ -108,7 +108,7 @@ export const Navbar: React.FC = () => {
                   key={item.label}
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-lg font-medium text-slate-200 hover:text-cyan-300 py-2 transition-colors border-b border-slate-800/60"
+                  className="text-base font-bold text-stone-800 hover:text-[#E05236] py-2 transition-colors border-b border-stone-100"
                 >
                   {item.label}
                 </a>
@@ -116,7 +116,7 @@ export const Navbar: React.FC = () => {
               <div className="pt-2">
                 <Button
                   href="#contact"
-                  variant="glow"
+                  variant="primary"
                   size="md"
                   className="w-full"
                   onClick={() => setMobileMenuOpen(false)}

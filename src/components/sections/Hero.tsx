@@ -1,16 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Search, TrendingUp, Code, Award, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Search, TrendingUp, Code, Share2, Target, Globe, Sparkles, ShieldCheck, Zap } from 'lucide-react';
 import { Container } from '../common/Container';
 import { Button } from '../common/Button';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-[90vh] pt-32 pb-20 md:pt-40 md:pb-28 flex items-center justify-center overflow-hidden bg-ai-grid">
+    <section className="relative min-h-[90vh] pt-32 pb-20 md:pt-40 md:pb-28 flex items-center justify-center overflow-hidden bg-[#FAF8F5] bg-ai-grid">
       {/* Glow background atmosphere */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] sm:w-[900px] h-[400px] bg-gradient-to-tr from-cyan-500/20 via-indigo-600/25 to-violet-600/20 blur-[140px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-[350px] h-[350px] bg-cyan-400/10 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute top-1/3 -left-20 w-[300px] h-[300px] bg-fuchsia-600/10 blur-[100px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] sm:w-[900px] h-[400px] bg-gradient-to-tr from-[#E05236]/10 via-[#FDF1EE]/80 to-transparent blur-[140px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-[350px] h-[350px] bg-[#E05236]/05 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/3 -left-20 w-[300px] h-[300px] bg-[#181C30]/05 blur-[100px] rounded-full pointer-events-none" />
 
       <Container size="lg" className="relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -21,8 +21,9 @@ export const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-bold uppercase tracking-wider mb-6 shadow-[0_0_20px_rgba(6,182,212,0.15)]"
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FDF1EE] border border-[#F8D7D0] text-[#E05236] text-xs font-bold uppercase tracking-wider mb-6 shadow-sm"
             >
+              <span className="w-2 h-2 rounded-full bg-[#E05236] animate-pulse" />
               <span>Best Marketing Agency in Palakkad</span>
             </motion.div>
 
@@ -31,10 +32,10 @@ export const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="font-display text-4xl sm:text-6xl md:text-7xl font-extrabold text-white tracking-tight leading-[1.08] mb-6"
+              className="font-display text-4xl sm:text-6xl md:text-7xl font-extrabold text-[#111113] tracking-tight leading-[1.08] mb-6"
             >
               Innovative Digital Solutions for <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-indigo-300 to-violet-400 drop-shadow-sm">
+              <span className="text-[#E05236] drop-shadow-sm">
                 Sustainable Growth.
               </span>
             </motion.h1>
@@ -44,7 +45,7 @@ export const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed max-w-2xl mb-8"
+              className="text-lg sm:text-xl text-stone-600 font-normal leading-relaxed max-w-2xl mb-8"
             >
               We provide innovative, result-driven digital marketing solutions that help businesses build a stronger online presence, connect with the right audience, and achieve measurable long-term growth.
             </motion.p>
@@ -58,7 +59,7 @@ export const Hero: React.FC = () => {
             >
               <Button
                 href="#services"
-                variant="glow"
+                variant="primary"
                 size="lg"
                 magnetic
                 icon={<ArrowRight className="w-5 h-5" />}
@@ -82,88 +83,136 @@ export const Hero: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="mt-12 pt-8 border-t border-[#1e2438] flex flex-wrap items-center gap-8 text-slate-400 text-xs font-semibold uppercase tracking-wider"
+              className="mt-12 pt-8 border-t border-[#E6E3DB] flex flex-wrap items-center gap-8 text-stone-600 text-xs font-bold uppercase tracking-wider"
             >
               <div className="flex items-center gap-2">
-                <Search className="w-4 h-4 text-emerald-400" />
+                <Search className="w-4 h-4 text-[#E05236]" />
                 <span>SEO & Organic Search</span>
               </div>
               <div className="flex items-center gap-2">
-                <TrendingUp className="w-4 h-4 text-cyan-400" />
+                <TrendingUp className="w-4 h-4 text-[#181C30]" />
                 <span>Google & Meta Ads</span>
               </div>
               <div className="flex items-center gap-2">
-                <Code className="w-4 h-4 text-violet-400" />
+                <Code className="w-4 h-4 text-[#E05236]" />
                 <span>Web Design & Dev</span>
               </div>
             </motion.div>
           </div>
 
-          {/* Right Hero Creative Visual Showcase */}
+          {/* Right Hero Visual Showcase: Minimalist Floating Metric Cards */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="lg:col-span-5 relative flex items-center justify-center"
+            className="lg:col-span-5 relative w-full flex flex-col justify-center gap-4 py-4"
           >
-            {/* Glowing orbital rings behind creative portrait */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div className="w-[340px] h-[340px] sm:w-[420px] sm:h-[420px] rounded-full border border-cyan-500/20 animate-[spin_40s_linear_infinite]" />
-              <div className="absolute w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] rounded-full border border-violet-500/25 border-dashed animate-[spin_25s_linear_infinite_reverse]" />
-              <div className="absolute w-[220px] h-[220px] sm:w-[280px] sm:h-[280px] rounded-full bg-gradient-to-tr from-cyan-500/20 via-indigo-600/25 to-violet-600/20 blur-3xl" />
-            </div>
+            {/* Ambient background glow */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#E05236]/08 via-[#181C30]/03 to-transparent rounded-3xl blur-2xl pointer-events-none" />
 
-            {/* Main Creative Graphic Frame */}
-            <div className="relative z-10 w-full max-w-[420px] rounded-3xl overflow-hidden border border-cyan-500/30 bg-[#090d16]/90 shadow-[0_0_40px_rgba(6,182,212,0.2)] group">
-              <img
-                src="/hero-agency.png"
-                alt="Mandis Digital Marketing Solutions"
-                className="w-full h-auto object-cover rounded-3xl transform group-hover:scale-102 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-transparent opacity-70" />
-
-              {/* Bottom Overlay Label */}
-              <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-[#070b14]/85 backdrop-blur-md border border-cyan-500/20 flex items-center justify-between">
-                <div>
-                  <div className="text-xs font-bold text-white">Mandis Digital</div>
-                  <div className="text-[10px] text-cyan-300">Palakkad, Kerala</div>
-                </div>
-                <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
-                  PALAKKAD #1
-                </span>
-              </div>
-            </div>
-
-            {/* Floating Badge 1: Proven Strategy */}
+            {/* Floating Metric Card 1: Client Commitment */}
             <motion.div
-              animate={{ y: [0, -6, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute -top-4 -right-2 sm:right-0 z-20 p-3.5 rounded-2xl bg-[#0b0f19]/95 backdrop-blur-xl border border-cyan-500/40 shadow-2xl flex items-center gap-3 shadow-cyan-950/40"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
+              className="relative z-10 bg-white/95 backdrop-blur-md p-5 sm:p-6 rounded-2xl border border-stone-200/80 shadow-lg hover:shadow-xl transition-all flex items-center justify-between gap-4 max-w-md ml-0 lg:ml-auto w-full"
             >
-              <div className="w-9 h-9 rounded-xl bg-cyan-500/20 text-cyan-300 flex items-center justify-center font-extrabold">
-                <CheckCircle2 className="w-5 h-5" />
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-xl bg-[#FDF1EE] text-[#E05236] flex items-center justify-center shrink-0">
+                  <ShieldCheck className="w-6 h-6" />
+                </div>
+                <div>
+                  <div className="text-2xl sm:text-3xl font-extrabold text-[#111113] tracking-tight">
+                    100%
+                  </div>
+                  <div className="text-xs sm:text-sm text-stone-600 font-medium">
+                    Client Commitment
+                  </div>
+                </div>
               </div>
-              <div>
-                <div className="text-[10px] uppercase tracking-wider text-slate-400 font-semibold">Result-Driven</div>
-                <div className="text-sm font-extrabold text-white">Customized Strategies</div>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/60 text-emerald-700 text-xs font-semibold shrink-0">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                Guaranteed
+              </span>
+            </motion.div>
+
+            {/* Floating Metric Card 2: ROI Focus (Highlighted Primary Dark Card) */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
+              className="relative z-10 bg-gradient-to-br from-[#181C30] to-[#252B46] text-white p-5 sm:p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all flex items-center justify-between gap-4 max-w-md w-full ml-0 sm:ml-6 lg:ml-4"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-xl bg-[#E05236] text-white flex items-center justify-center shrink-0 shadow-md">
+                  <TrendingUp className="w-6 h-6" />
+                </div>
+                <div>
+                  <div className="text-3xl sm:text-4xl font-extrabold text-[#E05236] tracking-tight">
+                    120x
+                  </div>
+                  <div className="text-xs sm:text-sm text-stone-300 font-medium">
+                    ROI Focus & Growth
+                  </div>
+                </div>
+              </div>
+              <div className="text-right shrink-0">
+                <span className="text-xs font-bold uppercase tracking-wider text-stone-400 block">Performance</span>
+                <span className="text-xs text-amber-400 font-semibold">Data-Driven</span>
               </div>
             </motion.div>
 
-            {/* Floating Badge 2: Client Rating */}
+            {/* Floating Metric Card 3: Value Impact */}
             <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
-              className="absolute bottom-16 -left-4 sm:-left-8 z-20 p-3.5 rounded-2xl bg-[#0b0f19]/95 backdrop-blur-xl border border-violet-500/40 shadow-2xl flex items-center gap-3 shadow-violet-950/40"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
+              className="relative z-10 bg-white/95 backdrop-blur-md p-5 sm:p-6 rounded-2xl border border-stone-200/80 shadow-lg hover:shadow-xl transition-all flex items-center justify-between gap-4 max-w-md ml-0 lg:ml-auto w-full"
             >
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-cyan-500 to-violet-500 text-slate-950 flex items-center justify-center font-bold shadow-lg shadow-cyan-500/20">
-                <Award className="w-5 h-5 text-white" />
-              </div>
-              <div>
-                <div className="text-[10px] uppercase tracking-wider text-slate-400 font-semibold">Client Satisfaction</div>
-                <div className="text-xs font-extrabold text-white flex items-center gap-1">
-                  Top Rated Agency <span className="text-amber-400">★ 5.0</span>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-xl bg-stone-100 text-[#181C30] flex items-center justify-center shrink-0">
+                  <Zap className="w-6 h-6 text-[#E05236]" />
+                </div>
+                <div>
+                  <div className="text-2xl sm:text-3xl font-extrabold text-[#111113] tracking-tight">
+                    10x
+                  </div>
+                  <div className="text-xs sm:text-sm text-stone-600 font-medium">
+                    Value & Scale Impact
+                  </div>
                 </div>
               </div>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-stone-100 border border-stone-200 text-stone-700 text-xs font-semibold shrink-0">
+                Long-Term
+              </span>
+            </motion.div>
+
+            {/* Bottom Service Pill Tags (Clean Minimalist Badges) */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              className="relative z-10 flex flex-wrap items-center justify-start lg:justify-end gap-2.5 mt-2"
+            >
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-stone-200/80 text-stone-700 text-xs font-semibold shadow-sm hover:border-[#E05236]/40 transition-colors">
+                <Search className="w-3.5 h-3.5 text-[#E05236]" />
+                SEO
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-stone-200/80 text-stone-700 text-xs font-semibold shadow-sm hover:border-[#E05236]/40 transition-colors">
+                <Target className="w-3.5 h-3.5 text-[#E05236]" />
+                Google & Meta Ads
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-stone-200/80 text-stone-700 text-xs font-semibold shadow-sm hover:border-[#E05236]/40 transition-colors">
+                <Globe className="w-3.5 h-3.5 text-[#181C30]" />
+                Web Dev
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-stone-200/80 text-stone-700 text-xs font-semibold shadow-sm hover:border-[#E05236]/40 transition-colors">
+                <Share2 className="w-3.5 h-3.5 text-[#E05236]" />
+                SMM
+              </span>
             </motion.div>
           </motion.div>
         </div>

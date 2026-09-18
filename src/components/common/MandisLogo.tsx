@@ -1,49 +1,50 @@
 import React from 'react';
 
 interface MandisLogoProps extends React.HTMLAttributes<HTMLDivElement> {
-  size?: number | string;
   height?: number | string;
+  size?: number | string;
   className?: string;
-  variant?: 'full' | 'mark' | 'badge';
+  variant?: 'full' | 'mark' | 'badge' | 'with-tagline';
   glow?: boolean;
   color?: string;
+  showTagline?: boolean;
 }
 
 export const MandisLogo: React.FC<MandisLogoProps> = ({
-  size,
   height,
+  size,
   className = '',
   variant = 'full',
-  glow = true,
+  glow = false,
   color = 'currentColor',
+  showTagline = false,
   ...props
 }) => {
-  const glowStyle = glow ? 'drop-shadow-[0_0_10px_rgba(6,182,212,0.35)]' : '';
+  const logoHeight = height || size || 50;
+  const glowStyle = glow ? 'drop-shadow-[0_2px_12px_rgba(24,28,48,0.15)]' : '';
 
-  if (variant === 'mark' || variant === 'badge') {
-    return (
-      <div className={`inline-flex flex-col leading-none select-none ${glowStyle} ${className}`} {...props}>
-        <span className="font-display font-bold text-white text-xs tracking-tight leading-none lowercase">
-          mandis
-        </span>
-        <span className="font-sans font-normal text-cyan-400 text-[8px] tracking-[0.18em] leading-none lowercase -mt-0.5">
-          digital
-        </span>
-      </div>
-    );
-  }
+  // Determine whether to use white or dark logo asset based on color prop
+  const isWhite =
+    color === '#FFFFFF' ||
+    color === 'white' ||
+    color === '#fff' ||
+    className.includes('text-white');
+
+  const logoSrc = isWhite ? '/mandis-logo-white.png' : '/mandis-logo-black.png';
 
   return (
-    <div className={`inline-flex flex-col leading-none select-none ${glowStyle} ${className}`} {...props}>
-      {/* Main Text: "mandis" - decreased size & boldness */}
-      <span className="font-display font-bold text-white text-xl sm:text-2xl tracking-tight leading-none lowercase">
-        mandis
-      </span>
-
-      {/* Sub-text: "digital" - decreased space between mandis and digital */}
-      <span className="font-sans font-normal text-cyan-400 text-[10px] sm:text-xs tracking-[0.22em] leading-none lowercase mt-0.5 opacity-90">
-        digital
-      </span>
+    <div
+      className={`inline-flex items-center select-none ${glowStyle} ${className}`}
+      {...props}
+    >
+      <img
+        src={logoSrc}
+        alt="Mandis Digital"
+        className="w-auto object-contain transition-transform duration-200"
+        style={{
+          height: typeof logoHeight === 'number' ? `${logoHeight}px` : logoHeight,
+        }}
+      />
     </div>
   );
 };

@@ -50,9 +50,9 @@ export const Testimonials: React.FC = () => {
   );
 
   return (
-    <section id="testimonials" className="py-24 bg-[#030712] relative overflow-hidden">
+    <section id="testimonials" className="py-24 bg-[#FAF8F5] relative overflow-hidden">
       {/* Ambient glowing orb */}
-      <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-cyan-500/10 blur-[140px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-[#E05236]/05 blur-[140px] rounded-full pointer-events-none" />
 
       <Container size="lg">
         <SectionHeading
@@ -68,7 +68,7 @@ export const Testimonials: React.FC = () => {
             type="button"
             onClick={prevSlide}
             aria-label="Previous Testimonials"
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-[#0b0f19]/90 border border-cyan-500/40 text-cyan-400 flex items-center justify-center hover:bg-cyan-500/20 hover:border-cyan-400 hover:scale-110 transition-all shadow-[0_0_20px_rgba(6,182,212,0.3)] focus:outline-none"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white border border-[#E6E3DB] text-stone-800 flex items-center justify-center hover:bg-[#FDF1EE] hover:text-[#E05236] hover:border-[#E05236] hover:scale-110 transition-all shadow-md focus:outline-none"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
@@ -78,7 +78,7 @@ export const Testimonials: React.FC = () => {
             type="button"
             onClick={nextSlide}
             aria-label="Next Testimonials"
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-[#0b0f19]/90 border border-cyan-500/40 text-cyan-400 flex items-center justify-center hover:bg-cyan-500/20 hover:border-cyan-400 hover:scale-110 transition-all shadow-[0_0_20px_rgba(6,182,212,0.3)] focus:outline-none"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white border border-[#E6E3DB] text-stone-800 flex items-center justify-center hover:bg-[#FDF1EE] hover:text-[#E05236] hover:border-[#E05236] hover:scale-110 transition-all shadow-md focus:outline-none"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
@@ -97,41 +97,41 @@ export const Testimonials: React.FC = () => {
                 {visibleItems.map((t) => (
                   <div
                     key={t.id}
-                    className="p-8 sm:p-10 rounded-3xl bg-[#0b0f19]/90 border border-[#1e2438] hover:border-cyan-500/40 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] transition-all duration-300 flex flex-col justify-between group min-h-[340px]"
+                    className="p-8 sm:p-10 rounded-3xl bg-white border border-[#E6E3DB] hover:border-[#E05236] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group min-h-[340px]"
                   >
                     <div>
                       {/* Rating Stars & Quote Icon */}
                       <div className="flex items-center justify-between mb-6">
-                        <div className="flex items-center gap-1 text-amber-400">
+                        <div className="flex items-center gap-1 text-amber-500">
                           {[...Array(t.stars)].map((_, i) => (
-                            <Star key={i} className="w-5 h-5 fill-amber-400" />
+                            <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
                           ))}
                         </div>
-                        <Quote className="w-8 h-8 text-cyan-500/20 group-hover:text-cyan-500/40 transition-colors" />
+                        <Quote className="w-8 h-8 text-[#E05236]/20 group-hover:text-[#E05236]/40 transition-colors" />
                       </div>
 
-                      <p className="text-slate-300 text-base leading-relaxed italic mb-8">
+                      <p className="text-stone-700 text-base leading-relaxed italic mb-8 font-normal">
                         "{t.quote}"
                       </p>
                     </div>
 
                     {/* Author / Client Footer */}
                     <div>
-                      <div className="p-3.5 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 mb-6 flex items-center justify-between">
-                        <span className="text-xs font-semibold text-cyan-300 flex items-center gap-1.5">
-                          <Award className="w-4 h-4 text-cyan-400" />
+                      <div className="p-3.5 rounded-2xl bg-[#FDF1EE] border border-[#F8D7D0] mb-6 flex items-center justify-between">
+                        <span className="text-xs font-bold text-[#E05236] flex items-center gap-1.5">
+                          <Award className="w-4 h-4 text-[#E05236]" />
                           Focus Area
                         </span>
-                        <span className="text-xs font-extrabold text-white">{t.metrics}</span>
+                        <span className="text-xs font-extrabold text-[#111113]">{t.metrics}</span>
                       </div>
 
                       <div className="flex items-center gap-4 pt-2">
-                        <div className={`w-12 h-12 rounded-2xl bg-gradient-to-tr ${t.avatarBg} flex items-center justify-center text-white font-extrabold text-base shadow-lg shrink-0`}>
+                        <div className="w-12 h-12 rounded-2xl bg-[#181C30] text-white flex items-center justify-center font-extrabold text-base shadow-md shrink-0">
                           {t.company.charAt(0)}
                         </div>
                         <div>
-                          <h4 className="font-display font-bold text-white text-lg">{t.company}</h4>
-                          <p className="text-xs text-slate-400">{t.role}</p>
+                          <h4 className="font-display font-extrabold text-[#111113] text-lg">{t.company}</h4>
+                          <p className="text-xs text-stone-500 font-medium">{t.role}</p>
                         </div>
                       </div>
                     </div>
@@ -151,8 +151,8 @@ export const Testimonials: React.FC = () => {
                 aria-label={`Go to slide page ${idx + 1}`}
                 className={`transition-all duration-300 rounded-full ${
                   currentIndex === idx
-                    ? 'w-8 h-2.5 bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.7)]'
-                    : 'w-2.5 h-2.5 bg-slate-700 hover:bg-slate-500'
+                    ? 'w-8 h-2.5 bg-[#E05236] shadow-sm'
+                    : 'w-2.5 h-2.5 bg-stone-300 hover:bg-stone-400'
                 }`}
               />
             ))}

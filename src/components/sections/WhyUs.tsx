@@ -37,9 +37,9 @@ const pillars = [
 
 export const WhyUs: React.FC = () => {
   return (
-    <section id="why-us" className="py-24 bg-[#070b14] relative overflow-hidden">
+    <section id="why-us" className="py-24 bg-[#EFECE6]/40 relative overflow-hidden">
       {/* Ambient glowing orb */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-cyan-500/10 blur-[150px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#E05236]/05 blur-[150px] rounded-full pointer-events-none" />
 
       <Container size="lg">
         <SectionHeading
@@ -58,26 +58,26 @@ export const WhyUs: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="p-8 rounded-3xl bg-[#0b0f19]/90 border border-[#1e2438] hover:border-cyan-500/40 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] transition-all duration-300 relative group overflow-hidden"
+                className="p-8 rounded-3xl bg-white border border-[#E6E3DB] hover:border-[#E05236] shadow-sm hover:shadow-xl transition-all duration-300 relative group overflow-hidden"
               >
                 <div className="flex items-center justify-between mb-6">
-                  <div className={`w-12 h-12 rounded-2xl bg-gradient-to-tr ${pillar.color} flex items-center justify-center text-white shadow-lg`}>
+                  <div className="w-12 h-12 rounded-2xl bg-[#E05236] text-white flex items-center justify-center shadow-md">
                     <Icon className="w-6 h-6" />
                   </div>
-                  <span className="text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-[#121626] text-cyan-300 border border-cyan-500/30">
+                  <span className="text-xs font-extrabold uppercase tracking-widest px-3 py-1 rounded-full bg-[#FDF1EE] text-[#E05236] border border-[#F8D7D0]">
                     {pillar.badge}
                   </span>
                 </div>
 
-                <h3 className="font-display text-2xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">
+                <h3 className="font-display text-2xl font-extrabold text-[#111113] mb-3 group-hover:text-[#E05236] transition-colors">
                   {pillar.title}
                 </h3>
-                <p className="text-slate-300 text-base leading-relaxed">
+                <p className="text-stone-700 text-base leading-relaxed font-normal">
                   {pillar.description}
                 </p>
 
-                {/* Subtle bottom highlight bar */}
-                <div className="mt-8 pt-4 border-t border-[#1e2438] flex items-center gap-2 text-xs font-semibold text-slate-500 group-hover:text-cyan-400 transition-colors">
+                {/* Bottom highlight bar */}
+                <div className="mt-8 pt-4 border-t border-[#E6E3DB] flex items-center gap-2 text-xs font-bold text-stone-500 group-hover:text-[#E05236] transition-colors">
                   <span>Mandis Guarantee</span>
                   <span>→</span>
                 </div>

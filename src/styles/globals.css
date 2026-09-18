@@ -3,69 +3,72 @@
 @tailwind utilities;
 
 :root {
-  --background: 3 7 18;
-  --foreground: 248 250 252;
-  --primary: 6 182 212;
-  --primary-hover: 2 132 199;
-  --accent: 139 92 246;
-  --surface: 11 15 25;
-  --surface-border: 30 36 56;
+  --background: 250 248 245;
+  --foreground: 17 17 19;
+  --primary: 224 82 54;
+  --primary-hover: 201 67 42;
+  --accent: 24 28 48;
+  --surface: 255 255 255;
+  --surface-border: 230 227 219;
 }
 
 @layer base {
+  html, body, h1, h2, h3, h4, h5, h6, input, textarea, select, button {
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  
   html {
-    color-scheme: dark;
+    color-scheme: light;
     scroll-behavior: smooth;
   }
   
   body {
-    background-color: rgb(var(--background));
-    color: rgb(var(--foreground));
-    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    background-color: #FAF8F5;
+    color: #111113;
     overflow-x: hidden;
   }
 
   /* Focus outline styles for accessibility */
   :focus-visible {
-    outline: 2px solid #38bdf8;
+    outline: 2px solid #E05236;
     outline-offset: 3px;
   }
 }
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-cyan-100 to-indigo-300;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-stone-900 via-stone-800 to-stone-950;
   }
   .text-gradient-accent {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-indigo-300 to-purple-400;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#E05236] via-[#D94E34] to-[#C9432A];
   }
   .text-gradient-ai {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-violet-300 to-fuchsia-400;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#E05236] via-[#181C30] to-[#E05236];
   }
   .bg-glass {
-    @apply bg-[#0b0f19]/75 backdrop-blur-xl border border-[#1e2438]/80;
+    @apply bg-[#FAF8F5]/85 backdrop-blur-xl border border-[#E6E3DB]/80;
   }
   .bg-glass-card {
-    @apply bg-gradient-to-b from-[#121626]/90 to-[#090d16]/95 backdrop-blur-2xl border border-cyan-500/15 shadow-2xl shadow-cyan-950/20;
+    @apply bg-white/95 backdrop-blur-xl border border-[#E6E3DB] shadow-[0_10px_30px_rgba(0,0,0,0.04)];
   }
   .bg-glass-ai {
-    @apply bg-[#0b0f19]/80 backdrop-blur-2xl border border-cyan-500/20 shadow-[0_8px_32px_0_rgba(0,242,254,0.05)];
+    @apply bg-white backdrop-blur-2xl border border-[#E6E3DB] shadow-[0_12px_40px_rgba(0,0,0,0.06)];
   }
   .glow-purple {
-    box-shadow: 0 0 50px -10px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 0 50px -10px rgba(224, 82, 54, 0.15);
   }
   .glow-cyan {
-    box-shadow: 0 0 50px -10px rgba(6, 182, 212, 0.35);
+    box-shadow: 0 0 50px -10px rgba(224, 82, 54, 0.2);
   }
   .glow-ai {
-    box-shadow: 0 0 35px -5px rgba(56, 189, 248, 0.25), 0 0 15px -3px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 0 35px -5px rgba(224, 82, 54, 0.15), 0 0 15px -3px rgba(24, 28, 48, 0.1);
   }
   .bg-ai-grid {
-    background-image: radial-gradient(rgba(56, 189, 248, 0.12) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(17, 17, 19, 0.05) 1px, transparent 1px);
     background-size: 28px 28px;
   }
   .noise-bg {
-    background-image: radial-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(224, 82, 54, 0.06) 1px, transparent 1px);
     background-size: 32px 32px;
   }
 }
@@ -87,13 +90,13 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #030712;
+  background: #FAF8F5;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e2438;
+  background: #E6E3DB;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #06b6d4;
+  background: #E05236;
 }
 

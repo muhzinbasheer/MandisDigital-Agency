@@ -20,9 +20,9 @@ export const Marquee: React.FC<MarqueeProps> = ({
 
   if (prefersReducedMotion) {
     return (
-      <div className={`py-6 overflow-x-auto flex gap-8 items-center justify-center border-y border-[#212638] bg-[#0b0d14] ${className}`}>
+      <div className={`py-6 overflow-x-auto flex gap-8 items-center justify-center border-y border-[#E6E3DB] bg-[#EFECE6]/60 ${className}`}>
         {items.map((item, index) => (
-          <span key={index} className="text-sm font-semibold tracking-wider uppercase text-slate-400 whitespace-nowrap">
+          <span key={index} className="text-xs font-bold tracking-widest uppercase text-stone-700 whitespace-nowrap">
             {item}
           </span>
         ))}
@@ -33,19 +33,19 @@ export const Marquee: React.FC<MarqueeProps> = ({
   const animationClass = direction === 'left' ? 'animate-marquee' : 'animate-marquee-reverse';
 
   return (
-    <div className={`relative overflow-hidden py-6 border-y border-[#212638] bg-[#0b0d14]/80 backdrop-blur-sm group ${className}`}>
+    <div className={`relative overflow-hidden py-5 border-y border-[#E6E3DB] bg-[#EFECE6]/60 backdrop-blur-sm group ${className}`}>
       {/* Left/Right Gradient Fades */}
-      <div className="absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-[#08090d] to-transparent z-10 pointer-events-none" />
-      <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-[#08090d] to-transparent z-10 pointer-events-none" />
+      <div className="absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-[#FAF8F5] to-transparent z-10 pointer-events-none" />
+      <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-[#FAF8F5] to-transparent z-10 pointer-events-none" />
 
       <div className="flex w-max group-hover:[animation-play-state:paused]">
         <div className={`flex gap-12 items-center whitespace-nowrap ${animationClass}`}>
           {displayItems.map((item, idx) => (
             <React.Fragment key={idx}>
-              <span className="text-sm font-bold tracking-widest uppercase text-slate-300 hover:text-indigo-400 transition-colors duration-200">
+              <span className="text-xs sm:text-sm font-extrabold tracking-widest uppercase text-stone-800 hover:text-[#E05236] transition-colors duration-200">
                 {item}
               </span>
-              <span className="w-2 h-2 rounded-full bg-indigo-500/40" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#E05236]/50" />
             </React.Fragment>
           ))}
         </div>

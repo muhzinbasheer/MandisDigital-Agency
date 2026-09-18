@@ -37,9 +37,9 @@ const steps = [
 
 export const Process: React.FC = () => {
   return (
-    <section id="process" className="py-24 bg-[#070b14] relative overflow-hidden">
+    <section id="process" className="py-24 bg-[#EFECE6]/40 relative overflow-hidden">
       {/* Ambient glowing orb */}
-      <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-cyan-500/10 blur-[140px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-[#E05236]/05 blur-[140px] rounded-full pointer-events-none" />
 
       <Container size="lg">
         <SectionHeading
@@ -58,34 +58,34 @@ export const Process: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.12 }}
-                className="p-6 rounded-3xl bg-[#0b0f19] border border-[#1e2438] hover:border-cyan-500/40 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] transition-all duration-300 relative group flex flex-col justify-between"
+                className="p-6 rounded-3xl bg-white border border-[#E6E3DB] hover:border-[#E05236] shadow-sm hover:shadow-xl transition-all duration-300 relative group flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <span className="font-display text-4xl font-extrabold text-cyan-500/40 group-hover:text-cyan-300 transition-colors">
+                    <span className="font-display text-4xl font-extrabold text-[#E05236]/30 group-hover:text-[#E05236] transition-colors">
                       {step.number}
                     </span>
-                    <span className="text-[11px] font-semibold px-2.5 py-1 rounded bg-[#121626] text-cyan-300 border border-cyan-500/20">
+                    <span className="text-[11px] font-bold px-2.5 py-1 rounded bg-[#FDF1EE] text-[#E05236] border border-[#F8D7D0]">
                       {step.phaseLabel}
                     </span>
                   </div>
 
-                  <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-[#FDF1EE] border border-[#F8D7D0] text-[#E05236] flex items-center justify-center mb-4">
                     <Icon className="w-5 h-5" />
                   </div>
 
-                  <h3 className="font-display text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
+                  <h3 className="font-display text-xl font-extrabold text-[#111113] mb-2 group-hover:text-[#E05236] transition-colors">
                     {step.title}
                   </h3>
 
-                  <p className="text-sm text-slate-400 leading-relaxed">
+                  <p className="text-sm text-stone-700 leading-relaxed font-normal">
                     {step.description}
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-[#1e2438] flex items-center justify-between text-xs text-slate-500">
+                <div className="mt-6 pt-4 border-t border-[#E6E3DB] flex items-center justify-between text-xs font-semibold text-stone-500">
                   <span>Step {step.number}</span>
-                  <span className="w-2 h-2 rounded-full bg-cyan-500/40 group-hover:bg-cyan-400 transition-colors" />
+                  <span className="w-2 h-2 rounded-full bg-[#E05236]/40 group-hover:bg-[#E05236] transition-colors" />
                 </div>
               </motion.div>
             );
