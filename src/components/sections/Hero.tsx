@@ -78,24 +78,39 @@ export const Hero: React.FC = () => {
               </Button>
             </motion.div>
 
-            {/* Trust Metrics Bar */}
+            {/* Client Brand Logos Strip */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="mt-12 pt-8 border-t border-[#E6E3DB] flex flex-wrap items-center gap-8 text-stone-600 text-xs font-bold uppercase tracking-wider"
+              className="mt-12 pt-8 border-t border-[#E6E3DB] w-full"
             >
-              <div className="flex items-center gap-2">
-                <Search className="w-4 h-4 text-[#E05236]" />
-                <span>SEO & Organic Search</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <TrendingUp className="w-4 h-4 text-[#181C30]" />
-                <span>Google & Meta Ads</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Code className="w-4 h-4 text-[#E05236]" />
-                <span>Web Design & Dev</span>
+              <span className="text-[11px] font-bold uppercase tracking-widest text-stone-600 block mb-4">
+                Trusted by Category Leaders & Growing Brands
+              </span>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 w-full">
+                {[
+                  { name: 'Mandis International', image: '/projects/mandis-international.png' },
+                  { name: 'Englishoo', image: '/projects/englishoo.jpg' },
+                  { name: '18 Smell Perfumes', image: '/projects/18-smell.jpg' },
+                  { name: 'Little DaVinci', image: '/projects/littledavinci.jpg' },
+                ].map((client, idx) => (
+                  <div
+                    key={idx}
+                    className="flex items-center gap-2.5 px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-2xl bg-white border border-[#E6E3DB] hover:border-[#E05236] hover:shadow-md transition-all duration-200 group w-full"
+                  >
+                    <div className="w-8 h-8 rounded-xl bg-stone-50 p-1 flex items-center justify-center shrink-0 border border-stone-100 overflow-hidden">
+                      <img
+                        src={client.image}
+                        alt={client.name}
+                        className="max-h-full max-w-full object-contain rounded-md group-hover:scale-105 transition-transform"
+                      />
+                    </div>
+                    <span className="text-xs font-bold text-[#111113] group-hover:text-[#E05236] transition-colors truncate">
+                      {client.name}
+                    </span>
+                  </div>
+                ))}
               </div>
             </motion.div>
           </div>

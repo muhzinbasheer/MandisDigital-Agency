@@ -11,6 +11,7 @@ export interface Project {
     value: string;
   }[];
   tags: string[];
+  image: string;
   imageBg: string;
   accentColor: string;
   featured: boolean;
@@ -31,7 +32,8 @@ export const projectsData: Project[] = [
       { label: "Organic Search", value: "Top 5" }
     ],
     tags: ["SEO", "Web Development", "Social Media", "Meta Ads"],
-    imageBg: "from-teal-900/60 to-emerald-900/60",
+    image: "/projects/englishoo.png",
+    imageBg: "from-[#005B60] to-[#00383C]",
     accentColor: "#10b981",
     featured: true
   },
@@ -49,7 +51,8 @@ export const projectsData: Project[] = [
       { label: "Visual Authority", value: "100%" }
     ],
     tags: ["Branding", "Graphic Design", "Video Marketing", "Meta Ads"],
-    imageBg: "from-amber-900/60 to-purple-900/60",
+    image: "/projects/18-smell.png",
+    imageBg: "from-[#4A5D6A] to-[#2C3844]",
     accentColor: "#f59e0b",
     featured: true
   },
@@ -67,14 +70,15 @@ export const projectsData: Project[] = [
       { label: "Customer Reach", value: "+260%" }
     ],
     tags: ["Branding", "Graphic Design", "Social Media"],
-    imageBg: "from-purple-900/60 to-indigo-900/60",
+    image: "/projects/littledavinci.png",
+    imageBg: "from-[#FAF8F5] to-[#EFECE6]",
     accentColor: "#8b5cf6",
     featured: true
   },
   {
     id: "mandis-ecommerce",
-    client: "Mandis",
-    industry: "E-commerce",
+    client: "Mandis International",
+    industry: "E-commerce & Distribution",
     title: "E-Commerce Product Presentation & Promotional Creatives",
     challenge: "Mandis needed improved online product presentation and promotional creatives to communicate product value clearly to customers.",
     strategy: "Created clear product presentation frameworks, high-converting ad creatives, and optimized the online store experience.",
@@ -85,7 +89,8 @@ export const projectsData: Project[] = [
       { label: "Sales Growth", value: "2.8x" }
     ],
     tags: ["Web Development", "Branding", "Meta Ads"],
-    imageBg: "from-blue-900/60 to-cyan-900/60",
+    image: "/projects/mandis-international-transparent.png",
+    imageBg: "from-[#0F172A] to-[#181C30]",
     accentColor: "#06b6d4",
     featured: true
   }

@@ -97,42 +97,39 @@ export const Testimonials: React.FC = () => {
                 {visibleItems.map((t) => (
                   <div
                     key={t.id}
-                    className="p-8 sm:p-10 rounded-3xl bg-white border border-[#E6E3DB] hover:border-[#E05236] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group min-h-[340px]"
+                    className="p-6 sm:p-8 rounded-3xl bg-white border border-[#E6E3DB] hover:border-[#E05236] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
                   >
                     <div>
-                      {/* Rating Stars & Quote Icon */}
-                      <div className="flex items-center justify-between mb-6">
-                        <div className="flex items-center gap-1 text-amber-500">
-                          {[...Array(t.stars)].map((_, i) => (
-                            <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
-                          ))}
-                        </div>
-                        <Quote className="w-8 h-8 text-[#E05236]/20 group-hover:text-[#E05236]/40 transition-colors" />
+                      {/* Top Quote Icon */}
+                      <div className="flex justify-end mb-2">
+                        <Quote className="w-7 h-7 text-[#E05236]/20 group-hover:text-[#E05236]/40 transition-colors" />
                       </div>
 
-                      <p className="text-stone-700 text-base leading-relaxed italic mb-8 font-normal">
+                      {/* Quote Comment */}
+                      <p className="text-stone-700 text-sm sm:text-base leading-relaxed italic mb-4 font-normal">
                         "{t.quote}"
                       </p>
+
+                      {/* Rating Stars Below Comment */}
+                      <div className="flex items-center gap-1 text-amber-500 mb-6">
+                        {[...Array(t.stars)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-amber-400 text-amber-400" />
+                        ))}
+                      </div>
                     </div>
 
-                    {/* Author / Client Footer */}
-                    <div>
-                      <div className="p-3.5 rounded-2xl bg-[#FDF1EE] border border-[#F8D7D0] mb-6 flex items-center justify-between">
-                        <span className="text-xs font-bold text-[#E05236] flex items-center gap-1.5">
-                          <Award className="w-4 h-4 text-[#E05236]" />
-                          Focus Area
-                        </span>
-                        <span className="text-xs font-extrabold text-[#111113]">{t.metrics}</span>
+                    {/* Author / Client Footer (Focus Area pill removed, logo without white border) */}
+                    <div className="flex items-center gap-4 pt-4 border-t border-[#E6E3DB]/60">
+                      <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl shrink-0 flex items-center justify-center overflow-hidden">
+                        <img
+                          src={t.image}
+                          alt={t.company}
+                          className="w-full h-full object-cover rounded-xl sm:rounded-2xl"
+                        />
                       </div>
-
-                      <div className="flex items-center gap-4 pt-2">
-                        <div className="w-12 h-12 rounded-2xl bg-[#181C30] text-white flex items-center justify-center font-extrabold text-base shadow-md shrink-0">
-                          {t.company.charAt(0)}
-                        </div>
-                        <div>
-                          <h4 className="font-display font-extrabold text-[#111113] text-lg">{t.company}</h4>
-                          <p className="text-xs text-stone-500 font-medium">{t.role}</p>
-                        </div>
+                      <div>
+                        <h4 className="font-display font-extrabold text-[#111113] text-base sm:text-lg">{t.company}</h4>
+                        <p className="text-xs text-stone-500 font-medium">{t.role}</p>
                       </div>
                     </div>
                   </div>

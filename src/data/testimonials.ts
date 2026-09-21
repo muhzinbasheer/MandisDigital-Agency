@@ -7,6 +7,7 @@ export interface Testimonial {
   metrics: string;
   avatarBg: string;
   logoText?: string;
+  image: string;
   stars: number;
 }
 
@@ -20,6 +21,7 @@ export const testimonialsData: Testimonial[] = [
     metrics: "Structured Digital Growth & SEO",
     avatarBg: "from-teal-500 to-emerald-600",
     logoText: "Englishoo",
+    image: "/projects/englishoo.jpg",
     stars: 5
   },
   {
@@ -31,6 +33,7 @@ export const testimonialsData: Testimonial[] = [
     metrics: "Stronger Identity & Visual Brand",
     avatarBg: "from-amber-500 to-indigo-600",
     logoText: "18 Smell",
+    image: "/projects/18-smell.jpg",
     stars: 5
   },
   {
@@ -42,17 +45,19 @@ export const testimonialsData: Testimonial[] = [
     metrics: "Branding, Catalogue & Digital Content",
     avatarBg: "from-purple-500 to-indigo-600",
     logoText: "LittleDavinci",
+    image: "/projects/littledavinci.jpg",
     stars: 5
   },
   {
     id: "mandis-ecommerce",
     quote: "The team supported us in improving our online product presentation, promotional creatives and overall digital presence. Their marketing approach helped us communicate our products more clearly to customers.",
     author: "Mandis E-commerce Team",
-    role: "E-commerce",
-    company: "Mandis",
+    role: "E-commerce & Distribution",
+    company: "Mandis International",
     metrics: "Product Presentation & Creatives",
     avatarBg: "from-cyan-500 to-blue-600",
     logoText: "Mandis",
+    image: "/projects/mandis-international.png",
     stars: 5
   }
 ];

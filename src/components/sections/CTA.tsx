@@ -133,7 +133,7 @@ export const CTA: React.FC = () => {
                       <input
                         id="phone"
                         type="tel"
-                        placeholder="+91 98765 43210"
+                        placeholder="+91 6282 615 630"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl bg-white border border-[#E6E3DB] text-[#111113] text-sm focus:outline-none focus:border-[#E05236] transition-colors shadow-sm"
