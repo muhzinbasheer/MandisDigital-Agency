@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Search, TrendingUp, Code, Share2, Target, Globe, ShieldCheck, Zap } from 'lucide-react';
+import { ArrowRight, Search, TrendingUp, Share2, Target, Globe, ShieldCheck, Zap } from 'lucide-react';
 import { Container } from '../common/Container';
 import { Button } from '../common/Button';
 
